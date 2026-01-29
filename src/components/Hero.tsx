@@ -1,24 +1,14 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { ArrowDown, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
-import { useRef } from 'react';
 import { useTranslation } from 'react-i18next'; // Import useTranslation
 import { Button } from './ui/Button';
 import { CONTACT_INFO } from '../utils/constants';
 
 export const Hero = () => {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"]
-  });
   const { t } = useTranslation(); // Initialize useTranslation hook
-
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
 
   return (
     <section
-      ref={ref}
       id="hero"
       className="min-h-screen relative overflow-hidden flex items-center justify-center pt-20"
     >
@@ -55,7 +45,7 @@ export const Hero = () => {
       />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <motion.div style={{ y, opacity }} className="max-w-6xl mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -106,9 +96,7 @@ export const Hero = () => {
             className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed text-justify"
             dangerouslySetInnerHTML={{ __html: t('hero.description') }} // Use dangerouslySetInnerHTML for HTML in description
           />
-        </motion.div>
 
-        <div className="max-w-6xl mx-auto text-center">
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
