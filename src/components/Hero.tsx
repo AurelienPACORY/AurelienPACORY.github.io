@@ -54,8 +54,8 @@ export const Hero = () => {
         }}
       />
 
-      <motion.div style={{ y, opacity }} className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="max-w-6xl mx-auto text-center">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
+        <motion.div style={{ y, opacity }} className="max-w-6xl mx-auto text-center">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -106,7 +106,9 @@ export const Hero = () => {
             className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed text-justify"
             dangerouslySetInnerHTML={{ __html: t('hero.description') }} // Use dangerouslySetInnerHTML for HTML in description
           />
+        </motion.div>
 
+        <div className="max-w-6xl mx-auto text-center">
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -151,7 +153,7 @@ export const Hero = () => {
             ))}
           </motion.div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Scroll Indicator */}
       <motion.div
