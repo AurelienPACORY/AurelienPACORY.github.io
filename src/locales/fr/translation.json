@@ -1,0 +1,70 @@
+{
+  "navigation": {
+    "about": "À propos",
+    "formations": "Formations",
+    "projects": "Projets",
+    "experiences": "Expériences",
+    "contact": "Contact",
+    "contact_me": "Me contacter"
+  },
+  "hero": {
+    "badge": "Portfolio 2026",
+    "greeting": "Bonjour, je suis",
+    "name": "Aurélien Pacory",
+    "title": "Étudiant en BUT Réseaux & Télécommunications",
+    "description": "Actuellement étudiant en BUT Réseaux et Télécommunications, je me passionne pour l’univers des réseaux informatiques et plus particulièrement pour la cybersécurité. Curieux de nature et toujours en quête de nouveaux défis, j’ai choisi d’orienter mon parcours vers ce domaine en pleine évolution.<br/><br/>C’est au fil de mes études que la cybersécurité s’est révélée comme une évidence. Dans un monde toujours plus connecté, assurer la protection des systèmes et des données est un enjeu crucial. J’ai envie de contribuer à cette mission en développant des solutions toujours plus sûres, efficaces et adaptées aux menaces actuelles.<br/><br/>J’aime apprendre, expérimenter et créer. Que ce soit à travers des projets personnels ou en entreprise, je prends plaisir à mettre mes compétences en pratique et à progresser continuellement.<br/><br/>Si vous souhaitez en savoir plus sur moi ou me contacter, n’hésitez pas à explorer ce site… ou à télécharger mon CV !",
+    "view_projects": "Voir mes projets",
+    "scroll_down": "Scroll"
+  },
+  "cv": {
+    "section_title": "Parcours",
+    "main_title": "Mon Profil Détaillé",
+    "main_description": "Mon parcours, mes compétences et mes centres d'intérêt",
+    "education_title": "Formation",
+    "languages_title": "Langues",
+    "soft_skills_title": "Savoir-être",
+    "skills_title": "Compétences",
+    "download_cv": "Télécharger mon CV"
+  },
+  "projects": {
+    "section_title": "Réalisations",
+    "main_title": "Mes Projets",
+    "main_description": "Découvrez mes réalisations techniques et innovations",
+    "filter_all": "Tous",
+    "code": "Code",
+    "demo": "Démo",
+    "projects_displayed": "projet(s) affiché(s)"
+  },
+  "experiences": {
+    "section_title": "Expériences",
+    "main_title": "Mes Expériences Professionnelles",
+    "main_description": "Mon parcours professionnel et mes stages",
+    "missions_title": "Missions principales :",
+    "skills_mobilized": "Compétences mobilisées :"
+  },
+  "contact": {
+    "section_title": "Contact",
+    "main_title": "Travaillons Ensemble",
+    "main_description": "Une question ? Un projet ? N'hésitez pas à me contacter",
+    "email": "Email",
+    "location": "Localisation",
+    "social_networks": "Réseaux sociaux",
+    "first_name": "Prénom*",
+    "last_name": "Nom de famille*",
+    "phone": "Téléphone",
+    "write_message": "Écrire un message*",
+    "your_first_name": "Votre prénom",
+    "your_last_name": "Votre nom de famille",
+    "your_email": "votre@email.com",
+    "your_phone": "Votre numéro de téléphone (facultatif)",
+    "your_message": "Votre message...",
+    "send_message": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "success_message": "Votre message a été envoyé avec succès !",
+    "error_message": "Une erreur est survenue. Veuillez réessayer."
+  },
+  "footer": {
+    "copyright_name": "Aurélien Pacory - France, Paris",
+    "back_to_top": "Retour en haut ↑"
+  }
+}

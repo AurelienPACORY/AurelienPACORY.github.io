@@ -1,0 +1,70 @@
+{
+  "navigation": {
+    "about": "About",
+    "formations": "Education",
+    "projects": "Projects",
+    "experiences": "Experience",
+    "contact": "Contact",
+    "contact_me": "Contact Me"
+  },
+  "hero": {
+    "badge": "Portfolio 2026",
+    "greeting": "Hello, I'm",
+    "name": "Aurélien Pacory",
+    "title": "Student in Networks & Telecommunications",
+    "description": "Currently a student in BUT Networks and Telecommunications, I am passionate about the world of computer networks and especially cybersecurity. Naturally curious and always looking for new challenges, I chose to orient my career towards this evolving field.<br/><br/>It was during my studies that cybersecurity became an obvious choice. In an increasingly connected world, ensuring the protection of systems and data is a crucial challenge. I want to contribute to this mission by developing solutions that are ever safer, more efficient, and adapted to current threats.<br/><br/>I love to learn, experiment, and create. Whether through personal projects or in a professional setting, I enjoy putting my skills into practice and continuously progressing.<br/><br/>If you would like to know more about me or contact me, feel free to explore this site... or download my CV!",
+    "view_projects": "View My Projects",
+    "scroll_down": "Scroll"
+  },
+  "cv": {
+    "section_title": "Journey",
+    "main_title": "My Detailed Profile",
+    "main_description": "My background, skills, and interests",
+    "education_title": "Education",
+    "languages_title": "Languages",
+    "soft_skills_title": "Soft Skills",
+    "skills_title": "Skills",
+    "download_cv": "Download My CV"
+  },
+  "projects": {
+    "section_title": "Works",
+    "main_title": "My Projects",
+    "main_description": "Discover my technical achievements and innovations",
+    "filter_all": "All",
+    "code": "Code",
+    "demo": "Demo",
+    "projects_displayed": "project(s) displayed"
+  },
+  "experiences": {
+    "section_title": "Experiences",
+    "main_title": "My Professional Experiences",
+    "main_description": "My professional journey and internships",
+    "missions_title": "Main missions :",
+    "skills_mobilized": "Skills mobilized :"
+  },
+  "contact": {
+    "section_title": "Contact",
+    "main_title": "Let's Work Together",
+    "main_description": "A question? A project? Feel free to contact me",
+    "email": "Email",
+    "location": "Location",
+    "social_networks": "Social Networks",
+    "first_name": "First Name*",
+    "last_name": "Last Name*",
+    "phone": "Phone",
+    "write_message": "Write a message*",
+    "your_first_name": "Your first name",
+    "your_last_name": "Your last name",
+    "your_email": "your@email.com",
+    "your_phone": "Your phone number (optional)",
+    "your_message": "Your message...",
+    "send_message": "Send Message",
+    "sending": "Sending...",
+    "success_message": "Your message has been sent successfully!",
+    "error_message": "An error occurred. Please try again."
+  },
+  "footer": {
+    "copyright_name": "Aurélien Pacory - France, Paris",
+    "back_to_top": "Back to top ↑"
+  }
+}
