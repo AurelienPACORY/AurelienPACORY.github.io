@@ -16,6 +16,58 @@
     "view_projects": "View My Projects",
     "scroll_down": "Scroll"
   },
+  "projects": {
+    "section_title": "Works",
+    "main_title": "My Projects",
+    "main_description": "Discover my technical achievements and innovations",
+    "filter_all": "All",
+    "code": "Code",
+    "demo": "Demo",
+    "projects_displayed": "project(s) displayed",
+    "categories": ["All", "Networks", "Systems", "Development"],
+    "list": [
+      {
+        "id": 1,
+        "title": "Corporate Network Configuration",
+        "description": "Implementation of a complete network infrastructure with VLANs, inter-VLAN routing, and security.",
+        "category": "Networks",
+        "tags": ["Cisco", "VLANs", "Routing", "Security"],
+        "image": "/assets/project1.jpg",
+        "github": "#",
+        "demo": "#"
+      },
+      {
+        "id": 2,
+        "title": "High Availability Web Server",
+        "description": "Deployment of a web server cluster with load balancing and redundancy.",
+        "category": "Systems",
+        "tags": ["Linux", "Nginx", "Docker", "HA"],
+        "image": "/assets/project2.jpg",
+        "github": "#",
+        "demo": "#"
+      },
+      {
+        "id": 3,
+        "title": "Network Traffic Analyzer",
+        "description": "Python application for real-time analysis and visualization of network traffic.",
+        "category": "Development",
+        "tags": ["Python", "Scapy", "Wireshark", "Data Viz"],
+        "image": "/assets/project3.jpg",
+        "github": "#",
+        "demo": "#"
+      },
+      {
+        "id": 4,
+        "title": "VoIP System",
+        "description": "Implementation of an IP telephony solution with Asterisk.",
+        "category": "Networks",
+        "tags": ["VoIP", "Asterisk", "SIP", "QoS"],
+        "image": "/assets/project4.jpg",
+        "github": "#",
+        "demo": "#"
+      }
+    ]
+  },
   "cv": {
     "section_title": "Journey",
     "main_title": "My Detailed Profile",
@@ -24,23 +76,138 @@
     "languages_title": "Languages",
     "soft_skills_title": "Soft Skills",
     "skills_title": "Skills",
-    "download_cv": "Download My CV"
-  },
-  "projects": {
-    "section_title": "Works",
-    "main_title": "My Projects",
-    "main_description": "Discover my technical achievements and innovations",
-    "filter_all": "All",
-    "code": "Code",
-    "demo": "Demo",
-    "projects_displayed": "project(s) displayed"
+     "skills": {
+       "list": [
+          { "name": "Networks & Protocols", "level": 85, "category": "network" },
+          { "name": "Cisco/Packet Tracer", "level": 80, "category": "network" },
+          { "name": "Linux/Unix", "level": 75, "category": "system" },
+          { "name": "Python", "level": 70, "category": "dev" },
+          { "name": "HTML/CSS/JS", "level": 85, "category": "dev" },
+          { "name": "Docker", "level": 65, "category": "system" },
+          { "name": "Network Security", "level": 70, "category": "network" },
+          { "name": "VoIP/Telephony", "level": 60, "category": "network" }
+        ]
+    },
+    "passions_title": "Hobbies",
+    "download_cv": "Download My CV",
+    "timeline": [
+      {
+        "year": "2023 - 2026",
+        "title": "BUT in Networks & Telecommunications",
+        "institution": "Specialization: Cybersecurity - IUT of Blois - Blois (41)",
+        "description": "Specialized training in networks, systems, and telecommunications, with a focus on cybersecurity."
+      },
+      {
+        "year": "2023",
+        "title": "General Baccalaureate",
+        "institution": "Specialties: Mathematics & Engineering Sciences - Lycée Notre Dame de Sion-Evry (91)",
+        "description": "Obtained the baccalaureate with a strong foundation in sciences."
+      }
+    ],
+    "languages": [
+      { "name": "French", "level": "Native language", "flag": "🇫🇷" },
+      { "name": "English", "level": "Level A2/B1", "flag": "🇬🇧" },
+      { "name": "Spanish", "level": "Level A2", "flag": "🇪🇸" }
+    ],
+    "hobbies": [
+      {
+        "title": "Playing the guitar",
+        "description": "I have been playing the guitar since 2018. I enjoy playing it regularly, especially with my friends and for my family during the holidays!",
+        "icon": "🎸"
+      },
+      {
+        "title": "Traveling / Culture",
+        "description": "One day, I would like to travel the world; other countries and their cultures fascinate me. Not to forget the culinary culture!",
+        "icon": "✈️"
+      },
+      {
+        "title": "Cooking",
+        "description": "Speaking of food, who doesn't like cakes? Fruit tarts, cream puffs, coconut pearls... But also cooking new flavors like rougail saucisse, Cantonese rice, or chicken curry.",
+        "icon": "🍳"
+      },
+      {
+        "title": "Sports",
+        "description": "I have practiced badminton, table tennis in a club, taekwondo (red belt), and sailing (level 3) for several years.",
+        "icon": "🏃‍♂️"
+      }
+    ],
+    "soft_skills": [
+      "Listening",
+      "Communication",
+      "Time management",
+      "Writing",
+      "Autonomy",
+      "Punctual"
+    ]
   },
   "experiences": {
     "section_title": "Experiences",
     "main_title": "My Professional Experiences",
     "main_description": "My professional journey and internships",
-    "missions_title": "Main missions :",
-    "skills_mobilized": "Skills mobilized :"
+    "missions_title": "Main missions:",
+    "skills_mobilized": "Skills utilized:",
+    "list": [
+      {
+        "year": "2025",
+        "title": "Internship",
+        "company": "SMART-IT",
+        "location": "Paris - 15ème",
+        "logo": "/smart-it-logo.png",
+        "summary": "This internship allowed me to consolidate my skills in networking, systems, cybersecurity, and technical support. It also taught me the importance of rigor, documentation, and clear communication with users from various backgrounds.",
+        "missions": [
+          {
+            "category": "Infrastructure and Network",
+            "tasks": [
+              "Migration of a Cisco firewall to SonicWall",
+              "Installation of UniFi Wi-Fi access points",
+              "Network configuration (DNS, DHCP, NAT)"
+            ],
+            "icon": "Wifi"
+          },
+          {
+            "category": "User Workstations & Automation",
+            "tasks": [
+              "Creation of Active Directory accounts",
+              "Development of a PowerShell script for automated extraction of user information"
+            ],
+            "icon": "Users"
+          },
+          {
+            "category": "VoIP & Network Cabling",
+            "tasks": [
+              "Deployment of Poly CCX 400 phones (Teams compatible)",
+              "Creation of an illustrated procedure to standardize installations"
+            ],
+            "icon": "Phone"
+          },
+          {
+            "category": "Cybersecurity & Awareness",
+            "tasks": [
+              "Analysis of fraudulent websites and prevention",
+              "Implementation of a secure guest Wi-Fi with a captive portal"
+            ],
+            "icon": "Shield"
+          }
+        ],
+        "skills": [
+          "Analytical skills and rigor",
+          "Autonomy and intervention management",
+          "Pedagogy and communication",
+          "Technical analysis of malicious websites",
+          "Reactivity to at-risk situations"
+        ]
+      },
+      {
+        "year": "2025 - 2026",
+        "title": "Apprenticeship Contract",
+        "company": "Sopra Steria",
+        "location": "Courbevoie (92)",
+        "logo": "/sopra logo.jpg",
+        "summary": "Apprenticeship in cybersecurity at a digital services company, contributing to the protection of systems and data.",
+        "missions": [],
+        "skills": []
+      }
+    ]
   },
   "contact": {
     "section_title": "Contact",

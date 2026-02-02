@@ -1,18 +1,22 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, FolderGit2, Github } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { PROJECTS } from '../utils/constants';
 
 export const Projects = () => {
   const { ref } = useScrollAnimation({ triggerOnce: true });
-  const [filter, setFilter] = useState('Tous');
-  const [hoveredId, setHoveredId] = useState<number | null>(null);
-  const categories = ['Tous', 'Réseaux', 'Systèmes', 'Développement'];
+  const { t } = useTranslation();
+  
+  const categories = t('projects.categories', { returnObjects: true }) as Array<string>;
+  const projectsData = t('projects.list', { returnObjects: true }) as Array<any>;
 
-  const filteredProjects = filter === 'Tous'
-    ? PROJECTS
-    : PROJECTS.filter(p => p.category === filter);
+  const [filter, setFilter] = useState(categories[0]);
+  const [hoveredId, setHoveredId] = useState<number | null>(null);
+
+  const filteredProjects = filter === categories[0]
+    ? projectsData
+    : projectsData.filter(p => p.category === filter);
 
   return (
     <section id="projects" ref={ref} className="py-32 relative overflow-hidden">
@@ -30,13 +34,13 @@ export const Projects = () => {
         >
           <div className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mb-6">
             <FolderGit2 className="w-5 h-5 text-luxury-accent" />
-            <span className="text-sm font-medium">Réalisations</span>
+            <span className="text-sm font-medium">{t('projects.section_title')}</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 gradient-text">
-            Mes Projets
+            {t('projects.main_title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Découvrez mes réalisations techniques et innovations
+            {t('projects.main_description')}
           </p>
         </motion.div>
 
@@ -146,7 +150,7 @@ export const Projects = () => {
                       className="flex items-center gap-2 text-sm font-medium text-luxury-accent hover:text-luxury-accent2 transition-colors"
                     >
                       <Github className="w-4 h-4" />
-                      Code
+                      {t('projects.code')}
                     </motion.a>
                     <motion.a
                       href={project.demo}
@@ -154,7 +158,7 @@ export const Projects = () => {
                       className="flex items-center gap-2 text-sm font-medium text-luxury-accent hover:text-luxury-accent2 transition-colors"
                     >
                       <ExternalLink className="w-4 h-4" />
-                      Demo
+                      {t('projects.demo')}
                     </motion.a>
                   </div>
                 </div>
@@ -172,7 +176,7 @@ export const Projects = () => {
         >
           <div className="glass inline-block px-8 py-4 rounded-2xl">
             <span className="text-luxury-accent font-semibold">
-              {filteredProjects.length} projet{filteredProjects.length > 1 ? 's' : ''} affiché{filteredProjects.length > 1 ? 's' : ''}
+              {t('projects.projects_displayed', { count: filteredProjects.length })}
             </span>
           </div>
         </motion.div>

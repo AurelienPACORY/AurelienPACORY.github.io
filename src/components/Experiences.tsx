@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Briefcase, Wifi, Users, Phone, Shield } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { EXPERIENCES } from '../utils/constants';
 import { Card } from './ui/Card';
 
 const iconMap = {
@@ -13,6 +13,9 @@ const iconMap = {
 
 export const Experiences = () => {
   const { ref } = useScrollAnimation({ triggerOnce: true });
+  const { t } = useTranslation();
+
+  const experiencesData = t('experiences.list', { returnObjects: true }) as Array<any>;
 
   return (
     <section id="experiences" ref={ref} className="py-32 relative overflow-hidden">
@@ -26,18 +29,18 @@ export const Experiences = () => {
         >
           <div className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mb-6">
             <Briefcase className="w-5 h-5 text-luxury-accent" />
-            <span className="text-sm font-medium">Expériences</span>
+            <span className="text-sm font-medium">{t('experiences.section_title')}</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 gradient-text">
-            Mes Expériences Professionnelles
+            {t('experiences.main_title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Mon parcours professionnel et mes stages
+            {t('experiences.main_description')}
           </p>
         </motion.div>
         
         <div className="max-w-4xl mx-auto space-y-12">
-            {EXPERIENCES.map((exp, index) => (
+            {experiencesData.map((exp, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
@@ -61,9 +64,9 @@ export const Experiences = () => {
 
                                 {exp.missions.length > 0 && (
                                     <div className="mb-6">
-                                        <h5 className="font-semibold mb-3">Missions principales :</h5>
+                                        <h5 className="font-semibold mb-3">{t('experiences.missions_title')}</h5>
                                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                            {exp.missions.map((mission, i) => {
+                                            {exp.missions.map((mission: any, i: number) => {
                                                 const Icon = iconMap[mission.icon as keyof typeof iconMap] || Briefcase;
                                                 return(
                                                     <div key={i} className="flex items-start gap-3">
@@ -71,7 +74,7 @@ export const Experiences = () => {
                                                         <div>
                                                             <h6 className="font-semibold">{mission.category}</h6>
                                                             <ul className="list-disc list-inside text-sm text-muted-foreground">
-                                                                {mission.tasks.map((task, j) => (
+                                                                {mission.tasks.map((task: string, j: number) => (
                                                                     <li key={j}>{task}</li>
                                                                 ))}
                                                             </ul>
@@ -85,9 +88,9 @@ export const Experiences = () => {
                                 
                                 {exp.skills.length > 0 && (
                                     <div>
-                                        <h5 className="font-semibold mb-3">Compétences mobilisées :</h5>
+                                        <h5 className="font-semibold mb-3">{t('experiences.skills_mobilized')}</h5>
                                         <div className="flex flex-wrap gap-2">
-                                            {exp.skills.map((skill, i) => (
+                                            {exp.skills.map((skill: string, i: number) => (
                                                 <span key={i} className="glass-strong text-xs font-medium px-3 py-1 rounded-full">
                                                     {skill}
                                                 </span>

@@ -1,12 +1,19 @@
 import { motion } from 'framer-motion';
 import { Award, Download, TrendingUp, Languages as LanguagesIcon, Heart, UserCheck } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
-import { SKILLS, TIMELINE, LANGUAGES, HOBBIES, SOFT_SKILLS } from '../utils/constants';
 import { Button } from './ui/Button';
 import { Card } from './ui/Card';
 
 export const CV = () => {
-  const { ref, isVisible } = useScrollAnimation({ triggerOnce: true });
+  const { ref } = useScrollAnimation({ triggerOnce: true });
+  const { t } = useTranslation();
+
+  const timelineData = t('cv.timeline', { returnObjects: true }) as Array<any>;
+  const languagesData = t('cv.languages', { returnObjects: true }) as Array<any>;
+  const hobbiesData = t('cv.hobbies', { returnObjects: true }) as Array<any>;
+  const softSkillsData = t('cv.soft_skills', { returnObjects: true }) as Array<string>;
+  const skillsData = t('cv.skills.list', { returnObjects: true }) as Array<any>;
 
   const container = {
     hidden: { opacity: 0 },
@@ -39,13 +46,13 @@ export const CV = () => {
         >
           <div className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mb-6">
             <Award className="w-5 h-5 text-luxury-accent" />
-            <span className="text-sm font-medium">Parcours</span>
+            <span className="text-sm font-medium">{t('cv.section_title')}</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 gradient-text">
-            Mon Profil Détaillé
+            {t('cv.main_title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Mon parcours, mes compétences et mes centres d'intérêt
+            {t('cv.main_description')}
           </p>
         </motion.div>
 
@@ -61,10 +68,10 @@ export const CV = () => {
                 className="text-2xl font-display font-bold mb-8 flex items-center gap-3"
               >
                 <div className="w-2 h-8 bg-gradient-to-b from-luxury-accent to-luxury-accent2 rounded-full" />
-                Formation
+                {t('cv.education_title')}
               </motion.h3>
               <div className="space-y-6">
-                {TIMELINE.map((timeline, index) => (
+                {timelineData.map((timeline, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -30 }}
@@ -95,10 +102,10 @@ export const CV = () => {
                 className="text-2xl font-display font-bold mb-8 flex items-center gap-3"
               >
                 <div className="w-2 h-8 bg-gradient-to-b from-luxury-accent to-luxury-accent2 rounded-full" />
-                Langues
+                {t('cv.languages_title')}
               </motion.h3>
               <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-4">
-                {LANGUAGES.map((lang) => (
+                {languagesData.map((lang) => (
                   <motion.div key={lang.name} variants={item}>
                     <Card hover={false}>
                       <div className="flex items-center gap-4">
@@ -123,12 +130,12 @@ export const CV = () => {
                 className="text-2xl font-display font-bold mb-8 flex items-center gap-3"
               >
                 <div className="w-2 h-8 bg-gradient-to-b from-luxury-accent to-luxury-accent2 rounded-full" />
-                Savoir-être
+                {t('cv.soft_skills_title')}
               </motion.h3>
               <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
                 <Card hover={false}>
                   <div className="grid grid-cols-2 gap-3">
-                    {SOFT_SKILLS.map((skill) => (
+                    {softSkillsData.map((skill) => (
                       <motion.span key={skill} variants={item} className="glass-strong text-sm font-medium px-4 py-2 rounded-full text-center">
                         {skill}
                       </motion.span>
@@ -150,10 +157,10 @@ export const CV = () => {
                 className="text-2xl font-display font-bold mb-8 flex items-center gap-3"
               >
                 <div className="w-2 h-8 bg-gradient-to-b from-luxury-accent to-luxury-accent2 rounded-full" />
-                Compétences
+                {t('cv.skills_title')}
               </motion.h3>
               <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-4">
-                {SKILLS.map((skill) => (
+                {skillsData.map((skill) => (
                   <motion.div key={skill.name} variants={item}>
                     <Card hover={false} className="group">
                       <div className="flex items-center justify-between mb-3">
@@ -190,7 +197,7 @@ export const CV = () => {
                 className="text-2xl font-display font-bold mb-8 flex items-center gap-3 justify-center"
             >
                 <div className="w-2 h-8 bg-gradient-to-b from-luxury-accent to-luxury-accent2 rounded-full" />
-                Passions
+                {t('cv.passions_title')}
             </motion.h3>
             <motion.div 
               variants={container} 
@@ -199,7 +206,7 @@ export const CV = () => {
               viewport={{ once: true }} 
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
-                {HOBBIES.map((hobby) => (
+                {hobbiesData.map((hobby) => (
                     <motion.div key={hobby.title} variants={item}>
                         <Card>
                             <div className="flex flex-col items-center text-center">
@@ -225,7 +232,7 @@ export const CV = () => {
           <Button asChild className="inline-flex items-center gap-3">
             <a href="/CV-Aurélien-PACORY.pdf" download="CV-Aurélien-PACORY.pdf">
               <Download className="w-5 h-5" />
-              Télécharger mon CV
+              {t('cv.download_cv')}
             </a>
           </Button>
         </motion.div>
