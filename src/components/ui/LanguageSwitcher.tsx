@@ -17,9 +17,7 @@ export function LanguageSwitcher() {
       className="font-semibold text-sm"
       aria-label="Changer de langue"
     >
-      <span className="absolute">
-        {currentLang.startsWith('fr') ? 'EN' : 'FR'}
-      </span>
+      {currentLang.startsWith('fr') ? 'EN' : 'FR'}
     </Button>
   );
 }
