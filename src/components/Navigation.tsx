@@ -54,7 +54,7 @@ export const Navigation = () => {
             />
           </motion.a>
 
-          {/* Desktop Menu */}
+          {/* Desktop Menu & Switchers */}
           <div className="hidden md:flex items-center gap-2">
             {menuItems.map((item, index) => (
               <motion.a
@@ -83,44 +83,37 @@ export const Navigation = () => {
                 />
               </motion.a>
             ))}
-          </div>
-
-          <div className="hidden md:flex items-center gap-4">
-            {/* CTA Button Desktop */}
-            <motion.a
-              href="#contact"
-              className="
-                hidden md:block
-                px-6 h-10 flex items-center justify-center rounded-xl
-                bg-gradient-to-r from-luxury-accent to-luxury-accent2
-                text-primary-foreground font-semibold
-                glow-effect
-                relative overflow-hidden
-              "
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {t('navigation.contact_me')}
-            </motion.a>
-            {/* Switchers Group */}
-            <div className="flex items-center gap-2">
+            {/* Switchers are now here */}
+            <div className="flex items-center gap-2 pl-4">
               <ThemeSwitcher />
               <LanguageSwitcher />
             </div>
           </div>
 
-
-          {/* Mobile Menu Button */}
-          <motion.button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden glass-strong p-3 rounded-xl"
-            whileTap={{ scale: 0.9 }}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </motion.button>
+          {/* CTA Button alone on the right */}
+          <div className="hidden md:flex">
+            <motion.a
+              href="#contact"
+              className="hidden md:block"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <motion.div
+                className="
+                  px-6 py-3 rounded-xl
+                  bg-gradient-to-r from-luxury-accent to-luxury-accent2
+                  text-primary-foreground font-semibold
+                  glow-effect
+                  relative overflow-hidden
+                "
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {t('navigation.contact_me')}
+              </motion.div>
+            </motion.a>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -168,9 +161,9 @@ export const Navigation = () => {
             >
               {t('navigation.contact_me')}
             </motion.a>
-            <div className="flex justify-center pt-4 gap-4"> {/* Add gap for LanguageSwitcher */}
+            <div className="flex justify-center pt-4 gap-4">
               <ThemeSwitcher />
-              <LanguageSwitcher /> {/* Add LanguageSwitcher */}
+              <LanguageSwitcher />
             </div>
           </motion.div>
         )}
