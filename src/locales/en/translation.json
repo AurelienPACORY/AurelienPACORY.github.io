@@ -228,7 +228,8 @@
     "send_message": "Send Message",
     "sending": "Sending...",
     "success_message": "Your message has been sent successfully!",
-    "error_message": "An error occurred. Please try again."
+    "error_message": "An error occurred. Please try again.",
+    "honeypot_label": "Do not fill this field"
   },
   "footer": {
     "copyright_name": "Aurélien Pacory - France, Paris",

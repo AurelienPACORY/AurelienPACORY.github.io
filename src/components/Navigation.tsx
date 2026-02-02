@@ -96,7 +96,7 @@ export const Navigation = () => {
             >
               <motion.div
                 className="
-                  px-6 py-3 rounded-xl
+                  px-6 h-10 flex items-center justify-center rounded-xl
                   bg-gradient-to-r from-luxury-accent to-luxury-accent2
                   text-primary-foreground font-semibold
                   glow-effect

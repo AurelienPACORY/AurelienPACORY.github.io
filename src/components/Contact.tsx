@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, MapPin, MessageCircle, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from 'react-i18next';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { CONTACT_INFO } from '../utils/constants';
 import { Button } from './ui/Button';
@@ -9,6 +10,7 @@ import { Card } from './ui/Card';
 
 export const Contact = () => {
   const { ref } = useScrollAnimation({ triggerOnce: true });
+  const { t } = useTranslation();
   const form = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState({
     firstName: '',
@@ -79,30 +81,30 @@ export const Contact = () => {
               <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium mb-3 text-foreground/80">Prénom*</label>
-                    <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} required className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none" placeholder="Votre prénom" />
+                    <label htmlFor="firstName" className="block text-sm font-medium mb-3 text-foreground/80">{t('contact.first_name')}</label>
+                    <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleChange} required className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none" placeholder={t('contact.your_first_name')} />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium mb-3 text-foreground/80">Nom de famille*</label>
-                    <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} required className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none" placeholder="Votre nom de famille" />
+                    <label htmlFor="lastName" className="block text-sm font-medium mb-3 text-foreground/80">{t('contact.last_name')}</label>
+                    <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleChange} required className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none" placeholder={t('contact.your_last_name')} />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-3 text-foreground/80">Email*</label>
-                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none" placeholder="votre@email.com" />
+                  <label htmlFor="email" className="block text-sm font-medium mb-3 text-foreground/80">{t('contact.email')}*</label>
+                  <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none" placeholder={t('contact.your_email')} />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-3 text-foreground/80">Téléphone</label>
-                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none" placeholder="Votre numéro de téléphone (facultatif)" />
+                  <label htmlFor="phone" className="block text-sm font-medium mb-3 text-foreground/80">{t('contact.phone')}</label>
+                  <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none" placeholder={t('contact.your_phone')} />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-3 text-foreground/80">Écrire un message*</label>
-                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none resize-none" placeholder="Votre message..."></textarea>
+                  <label htmlFor="message" className="block text-sm font-medium mb-3 text-foreground/80">{t('contact.write_message')}</label>
+                  <textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="w-full px-6 py-4 rounded-2xl glass-strong border-2 border-transparent focus:border-luxury-accent transition-all duration-300 outline-none resize-none" placeholder={t('contact.your_message')}></textarea>
                 </div>
                 
                 {/* Honeypot field for spam protection */}
                 <div style={{ display: 'none' }}>
-                    <label htmlFor="honeypot">Ne pas remplir ce champ</label>
+                    <label htmlFor="honeypot">{t('contact.honeypot_label')}</label>
                     <input
                         type="text"
                         id="honeypot"
@@ -113,10 +115,10 @@ export const Contact = () => {
                 </div>
 
                 <Button type="submit" className="w-full flex items-center justify-center gap-3" disabled={submissionStatus === 'sending'}>
-                  {submissionStatus === 'sending' ? 'Envoi en cours...' : (
+                  {submissionStatus === 'sending' ? t('contact.sending') : (
                     <>
                       <Send className="w-5 h-5" />
-                      Envoyer le message
+                      {t('contact.send_message')}
                     </>
                   )}
                 </Button>
@@ -124,13 +126,13 @@ export const Contact = () => {
                 {submissionStatus === 'success' && (
                   <div className="flex items-center gap-2 p-4 rounded-2xl bg-green-500/20 text-green-500">
                     <CheckCircle className="w-5 h-5" />
-                    <span>Votre message a été envoyé avec succès !</span>
+                    <span>{t('contact.success_message')}</span>
                   </div>
                 )}
                 {submissionStatus === 'error' && (
                   <div className="flex items-center gap-2 p-4 rounded-2xl bg-red-500/20 text-red-500">
                     <AlertCircle className="w-5 h-5" />
-                    <span>Une erreur est survenue. Veuillez réessayer.</span>
+                    <span>{t('contact.error_message')}</span>
                   </div>
                 )}
               </form>

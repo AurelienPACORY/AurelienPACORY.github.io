@@ -228,7 +228,8 @@
     "send_message": "Envoyer le message",
     "sending": "Envoi en cours...",
     "success_message": "Votre message a été envoyé avec succès !",
-    "error_message": "Une erreur est survenue. Veuillez réessayer."
+    "error_message": "Une erreur est survenue. Veuillez réessayer.",
+    "honeypot_label": "Ne pas remplir ce champ"
   },
   "footer": {
     "copyright_name": "Aurélien Pacory - France, Paris",
