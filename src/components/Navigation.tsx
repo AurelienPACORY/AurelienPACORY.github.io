@@ -89,24 +89,21 @@ export const Navigation = () => {
             {/* CTA Button Desktop */}
             <motion.a
               href="#contact"
-              className="hidden md:block"
+              className="
+                hidden md:block
+                px-6 h-10 flex items-center justify-center rounded-xl
+                bg-gradient-to-r from-luxury-accent to-luxury-accent2
+                text-primary-foreground font-semibold
+                glow-effect
+                relative overflow-hidden
+              "
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              <motion.div
-                className="
-                  px-6 h-10 flex items-center justify-center rounded-xl
-                  bg-gradient-to-r from-luxury-accent to-luxury-accent2
-                  text-primary-foreground font-semibold
-                  glow-effect
-                  relative overflow-hidden
-                "
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                {t('navigation.contact_me')}
-              </motion.div>
+              {t('navigation.contact_me')}
             </motion.a>
             {/* Switchers Group */}
             <div className="flex items-center gap-2">
