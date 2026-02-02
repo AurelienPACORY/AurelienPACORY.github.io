@@ -123,7 +123,7 @@ export const EXPERIENCES = [
     title: 'Contrat d\'apprentissage',
     company: 'Sopra Steria',
     location: 'Courbevoie (92)',
-    logo: '', // No logo provided yet
+    logo: '/sopra logo.jpg',
     summary: 'Apprentissage en cybersécurité au sein d\'une entreprise de services numériques, contribuant à la protection des systèmes et des données.',
     missions: [],
     skills: [],
