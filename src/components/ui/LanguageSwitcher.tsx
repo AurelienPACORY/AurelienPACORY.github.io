@@ -14,10 +14,12 @@ export function LanguageSwitcher() {
       variant="ghost"
       size="icon"
       onClick={toggleLanguage}
-      className="font-semibold text-sm w-10 h-10"
+      className="font-semibold text-sm"
       aria-label="Changer de langue"
     >
-      {currentLang.startsWith('fr') ? 'EN' : 'FR'}
+      <span className="absolute">
+        {currentLang.startsWith('fr') ? 'EN' : 'FR'}
+      </span>
     </Button>
   );
 }

@@ -108,8 +108,11 @@ export const Navigation = () => {
                 {t('navigation.contact_me')}
               </motion.div>
             </motion.a>
-            <ThemeSwitcher />
-            <LanguageSwitcher /> {/* Add LanguageSwitcher */}
+            {/* Switchers Group */}
+            <div className="flex items-center gap-2">
+              <ThemeSwitcher />
+              <LanguageSwitcher />
+            </div>
           </div>
 
 
