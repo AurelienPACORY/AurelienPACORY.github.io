@@ -220,7 +220,7 @@ export const CV = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center scroll-mt-24"
         >
           <Button asChild className="inline-flex items-center gap-3">
             <a href="/CV-Aurélien-PACORY.pdf" download="CV-Aurélien-PACORY.pdf">
