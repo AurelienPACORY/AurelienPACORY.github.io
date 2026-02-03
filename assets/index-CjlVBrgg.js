@@ -184,13 +184,13 @@ Error generating stack: `+r.message+`
                   text-primary-foreground font-semibold
                   glow-effect
                   relative overflow-hidden
-                `,whileHover:{scale:1.05},whileTap:{scale:.95},children:r("navigation.contact_me")})}),x.jsx(zm,{}),x.jsx(Vm,{})]}),x.jsx(N.button,{onClick:()=>e(!t),className:"md:hidden glass-strong p-3 rounded-xl",whileTap:{scale:.9},children:t?x.jsx(Q_,{size:24}):x.jsx($_,{size:24})})]}),t&&x.jsxs(N.div,{initial:{opacity:0,height:0},animate:{opacity:1,height:"auto"},exit:{opacity:0,height:0},transition:{duration:.3,ease:[.16,1,.3,1]},className:"md:hidden mt-6 space-y-3",children:[o.map((u,c)=>x.jsx(N.a,{href:u.href,onClick:()=>e(!1),initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{duration:.3,delay:c*.05},className:`
-                  block px-6 py-4 rounded-xl
-                  glass-strong
-                  text-foreground/80 hover:text-foreground
-                  font-medium
-                  transition-all duration-300
-                `,children:u.name},u.name)),x.jsx(N.a,{href:"#contact",onClick:()=>e(!1),initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{duration:.3,delay:o.length*.05},className:`
+                `,whileHover:{scale:1.05},whileTap:{scale:.95},children:r("navigation.contact_me")})}),x.jsx(zm,{}),x.jsx(Vm,{})]}),x.jsx(N.button,{onClick:()=>e(!t),className:"md:hidden glass-strong p-3 rounded-xl",whileTap:{scale:.9},children:t?x.jsx(Q_,{size:24}):x.jsx($_,{size:24})})]}),t&&x.jsxs(N.div,{initial:{opacity:0,height:0},animate:{opacity:1,height:"auto"},exit:{opacity:0,height:0},transition:{duration:.3,ease:[.16,1,.3,1]},className:"md:hidden mt-6 space-y-3",children:[o.map((u,c)=>{const f=l===u.href.substring(1);return x.jsx(N.a,{href:u.href,onClick:()=>e(!1),initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{duration:.3,delay:c*.05},className:`
+                    block px-6 py-4 rounded-xl
+                    glass-strong
+                    font-medium
+                    transition-all duration-300
+                    ${f?"text-luxury-accent":"text-foreground/80 hover:text-foreground"}
+                  `,children:u.name},u.name)}),x.jsx(N.a,{href:"#contact",onClick:()=>e(!1),initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{duration:.3,delay:o.length*.05},className:`
                 block px-6 py-4 rounded-xl
                 bg-gradient-to-r from-luxury-accent to-luxury-accent2
                 text-primary-foreground font-semibold text-center
