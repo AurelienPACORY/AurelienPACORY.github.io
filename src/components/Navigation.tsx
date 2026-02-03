@@ -108,7 +108,7 @@ export const Navigation = () => {
                 {t('navigation.contact_me')}
               </motion.div>
             </motion.a>
-            <ThemeSwitcher />
+            <ThemeSwitcher className="-translate-y-px" />
             <LanguageSwitcher />
           </div>
 
