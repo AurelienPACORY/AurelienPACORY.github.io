@@ -199,13 +199,24 @@
       },
       {
         "year": "2025 - 2026",
-        "title": "Apprenticeship Contract",
+        "title": "CTI Analyst (Apprenticeship)",
         "company": "Sopra Steria",
         "location": "Courbevoie (92)",
         "logo": "/sopra logo.jpg",
-        "summary": "Apprenticeship in cybersecurity at a digital services company, contributing to the protection of systems and data.",
-        "missions": [],
-        "skills": []
+        "summary": "Apprenticeship as a Cyber Threat Intelligence (CTI) analyst. Contributing to system protection through threat analysis and contextualization.",
+        "missions": [
+          {
+            "category": "Threat Analysis",
+            "tasks": [
+              "Analyzing Threat Intelligence reports",
+              "Identifying TTPs (Tactics, Techniques, and Procedures) and IOCs (Indicators of Compromise)",
+              "Utilizing the MITRE ATT&CK framework",
+              "Contributing to the OpenCTI platform"
+            ],
+            "icon": "Shield"
+          }
+        ],
+        "skills": ["MITRE ATT&CK", "OpenCTI", "TTPs", "IOCs"]
       }
     ]
   },
