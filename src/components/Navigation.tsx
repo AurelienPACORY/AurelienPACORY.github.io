@@ -108,8 +108,10 @@ export const Navigation = () => {
                 {t('navigation.contact_me')}
               </motion.div>
             </motion.a>
-            <ThemeSwitcher className="-translate-y-px" />
-            <LanguageSwitcher />
+            <div className="flex items-baseline gap-2">
+              <ThemeSwitcher />
+              <LanguageSwitcher />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
