@@ -1,8 +1,11 @@
 import { useTheme } from 'next-themes';
 import { Button } from './Button';
 import { Moon, Sun } from 'lucide-react';
+import { HTMLAttributes } from 'react';
 
-export function ThemeSwitcher() {
+interface ThemeSwitcherProps extends HTMLAttributes<HTMLButtonElement> {}
+
+export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -11,6 +14,7 @@ export function ThemeSwitcher() {
       size="icon"
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       aria-label="Toggle theme"
+      className={className}
     >
       <Sun className="absolute h-[1.2rem] w-[1.2rem] transition-all duration-300
                       scale-100 rotate-0 opacity-100 pointer-events-auto

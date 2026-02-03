@@ -109,7 +109,7 @@ export const Navigation = () => {
               </motion.div>
             </motion.a>
             <div className="flex items-baseline gap-2">
-              <ThemeSwitcher />
+              <ThemeSwitcher className="-translate-y-0.5" />
               <LanguageSwitcher />
             </div>
           </div>
