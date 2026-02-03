@@ -3,13 +3,13 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ThemeSwitcher } from './ui/ThemeSwitcher';
-import { LanguageSwitcher } from './ui/LanguageSwitcher'; // Import LanguageSwitcher
+import { LanguageSwitcher } from './ui/LanguageSwitcher';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
-  const { t } = useTranslation(); // Initialize useTranslation hook
+  const { t } = useTranslation();
 
   const menuItems = [
     { name: t('navigation.about'), href: '#hero' },
@@ -87,7 +87,6 @@ export const Navigation = () => {
 
           {/* Right-side controls */}
           <div className="hidden md:flex items-baseline gap-4">
-            {/* CTA Button Desktop */}
             <motion.a
               href="#contact"
               className="hidden md:block"
@@ -113,7 +112,6 @@ export const Navigation = () => {
             <LanguageSwitcher />
           </div>
 
-
           {/* Mobile Menu Button */}
           <motion.button
             onClick={() => setIsOpen(!isOpen)}
@@ -123,6 +121,58 @@ export const Navigation = () => {
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
         </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="md:hidden mt-6 space-y-3"
+          >
+            {menuItems.map((item, index) => (
+              <motion.a
+                key={item.name}
+                href={item.href}
+                onClick={() => setIsOpen(false)}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.3,
+                  delay: index * 0.05,
+                }}
+                className="
+                  block px-6 py-4 rounded-xl
+                  glass-strong
+                  text-foreground/80 hover:text-foreground
+                  font-medium
+                  transition-all duration-300
+                "
+              >
+                {item.name}
+              </motion.a>
+            ))}
+            <motion.a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: menuItems.length * 0.05 }}
+              className="
+                block px-6 py-4 rounded-xl
+                bg-gradient-to-r from-luxury-accent to-luxury-accent2
+                text-primary-foreground font-semibold text-center
+              "
+            >
+              {t('navigation.contact_me')}
+            </motion.a>
+            <div className="flex justify-center pt-4 gap-4">
+              <ThemeSwitcher />
+              <LanguageSwitcher />
+            </div>
+          </motion.div>
+        )}
       </div>
     </motion.nav>
   );
