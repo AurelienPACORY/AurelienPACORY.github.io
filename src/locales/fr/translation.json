@@ -92,6 +92,12 @@
     "download_cv": "Télécharger mon CV",
     "timeline": [
       {
+        "year": "2026 - 2028",
+        "title": "MSc Cybersécurité",
+        "institution": "Cybersup - Courbevoie (92)",
+        "description": "Master of Science en alternance visant une expertise technique approfondie en sécurité (pentesting, SOC, DevSecOps, cloud) et en gouvernance (GRC). Préparation à des certifications professionnelles et au Titre RNCP de Niveau 7."
+      },
+      {
         "year": "2023 - 2026",
         "title": "BUT Réseaux & Télécommunications",
         "institution": "Parcours: Cybersécurité - IUT de Blois - Blois (41)",

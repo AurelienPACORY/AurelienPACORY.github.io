@@ -92,6 +92,12 @@
     "download_cv": "Download My CV",
     "timeline": [
       {
+        "year": "2026 - 2028",
+        "title": "MSc in Cybersecurity",
+        "institution": "Cybersup - Courbevoie (92)",
+        "description": "Work-study Master of Science aiming for in-depth technical expertise in security (pentesting, SOC, DevSecOps, cloud) and governance (GRC). Preparation for professional certifications and a Level 7 RNCP Title."
+      },
+      {
         "year": "2023 - 2026",
         "title": "BUT in Networks & Telecommunications",
         "institution": "Specialization: Cybersecurity - IUT of Blois - Blois (41)",
