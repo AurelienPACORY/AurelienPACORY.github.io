@@ -96,21 +96,21 @@
         "title": "MSc Cybersécurité",
         "institution": "Cybersup - Courbevoie (92)",
         "description": "Master of Science en alternance visant une expertise technique approfondie en sécurité (pentesting, SOC, DevSecOps, cloud) et en gouvernance (GRC). Préparation à des certifications professionnelles et au Titre RNCP de Niveau 7.",
-        "logo": "/assets/cybersup-logo.svg"
+        "logo": "/assets/cyber.png"
       },
       {
         "year": "2023 - 2026",
         "title": "BUT Réseaux & Télécommunications",
         "institution": "Parcours: Cybersécurité - IUT de Blois - Blois (41)",
         "description": "Formation spécialisée en réseaux, systèmes et télécommunications, avec un focus sur la cybersécurité.",
-        "logo": "/assets/iut-blois-logo.svg"
+        "logo": "/assets/blois.jpg"
       },
       {
         "year": "2023",
         "title": "Baccalauréat Général",
         "institution": "Spécialités: Mathématiques & Sciences de l'Ingénieur - Lycée Notre Dame de Sion-Evry (91)",
         "description": "Obtention du baccalauréat avec une formation solide en sciences.",
-        "logo": "/assets/sion-evry-logo.svg"
+        "logo": "/assets/sion.png"
       }
     ],
     "languages": [
