@@ -138,28 +138,31 @@ export const Navigation = () => {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="md:hidden mt-6 space-y-3"
           >
-            {menuItems.map((item, index) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.05,
-                }}
-                className="
-                  block px-6 py-4 rounded-xl
-                  glass-strong
-                  text-foreground/80 hover:text-foreground
-                  font-medium
-                  transition-all duration-300
-                "
-              >
-                {item.name}
-              </motion.a>
-            ))}
+            {menuItems.map((item, index) => {
+              const isActive = activeSection === item.href.substring(1);
+              return (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: index * 0.05,
+                  }}
+                  className={`
+                    block px-6 py-4 rounded-xl
+                    glass-strong
+                    font-medium
+                    transition-all duration-300
+                    ${isActive ? 'text-luxury-accent' : 'text-foreground/80 hover:text-foreground'}
+                  `}
+                >
+                  {item.name}
+                </motion.a>
+              );
+            })}
             <motion.a
               href="#contact"
               onClick={() => setIsOpen(false)}
