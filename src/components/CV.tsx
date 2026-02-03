@@ -85,8 +85,7 @@ export const CV = () => {
                     <Card hover={false} className="group">
                       <div className="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-6 items-start">
                         {timeline.logo && (
-                          <img src={timeline.logo} alt={`${timeline.title} logo`} className="w-24 h-24 mx-auto md:mx-0 rounded-full object-contain bg-background" />
-                        )}
+                                                      <img src={timeline.logo} alt={`${timeline.title} logo`} className="w-24 h-24 mx-auto md:mx-0 rounded-2xl object-contain bg-background" />                        )}
                         <div className={!timeline.logo ? 'md:col-span-2' : ''}>
                           <div className="text-sm text-luxury-accent font-semibold mb-2">{timeline.year}</div>
                           <h4 className="text-xl font-display font-semibold mb-2 group-hover:gradient-text transition-all">{timeline.title}</h4>
