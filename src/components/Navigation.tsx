@@ -2,6 +2,7 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useActiveSection } from '../hooks/useActiveSection';
 import { ThemeSwitcher } from './ui/ThemeSwitcher';
 import { LanguageSwitcher } from './ui/LanguageSwitcher';
 
@@ -18,6 +19,9 @@ export const Navigation = () => {
     { name: t('navigation.experiences'), href: '#experiences' },
     { name: t('navigation.contact'), href: '#contact' },
   ];
+
+  const sectionIds = menuItems.map(item => item.href.substring(1));
+  const activeSection = useActiveSection(sectionIds);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setIsScrolled(latest > 50);
@@ -56,33 +60,36 @@ export const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-baseline gap-2">
-            {menuItems.map((item, index) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                className="
-                  px-6 py-3 rounded-xl
-                  text-foreground/80 hover:text-foreground
-                  font-medium
-                  relative group
-                  transition-all duration-300
-                "
-              >
-                <span className="relative z-10">{item.name}</span>
-                <motion.div
-                  className="absolute inset-0 glass rounded-xl opacity-0 group-hover:opacity-100"
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.a>
-            ))}
+            {menuItems.map((item, index) => {
+              const isActive = activeSection === item.href.substring(1);
+              return (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.1,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className={`
+                    px-6 py-3 rounded-xl
+                    font-medium
+                    relative group
+                    transition-all duration-300
+                    ${isActive ? 'text-luxury-accent' : 'text-foreground/80 hover:text-foreground'}
+                  `}
+                >
+                  <span className="relative z-10">{item.name}</span>
+                  <motion.div
+                    className="absolute inset-0 glass rounded-xl opacity-0 group-hover:opacity-100"
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.a>
+              );
+            })}
           </div>
 
           {/* Right-side controls */}
@@ -108,9 +115,8 @@ export const Navigation = () => {
                 {t('navigation.contact_me')}
               </motion.div>
             </motion.a>
-            <div className="flex items-baseline gap-2">
-                          <ThemeSwitcher />
-                          <LanguageSwitcher />            </div>
+            <ThemeSwitcher />
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}

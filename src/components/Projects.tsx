@@ -166,20 +166,6 @@ export const Projects = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Project Count */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="glass inline-block px-8 py-4 rounded-2xl">
-            <span className="text-luxury-accent font-semibold">
-              {t('projects.projects_displayed', { count: filteredProjects.length })}
-            </span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
