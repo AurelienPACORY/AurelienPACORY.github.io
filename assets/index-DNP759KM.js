@@ -194,7 +194,7 @@ Error generating stack: `+r.message+`
                   text-primary-foreground font-semibold
                   glow-effect
                   relative overflow-hidden
-                `,whileHover:{scale:1.05},whileTap:{scale:.95},children:r("navigation.contact_me")})}),x.jsx(zm,{className:"-translate-y-px"}),x.jsx(Vm,{})]}),x.jsx(I.button,{onClick:()=>e(!t),className:"md:hidden glass-strong p-3 rounded-xl",whileTap:{scale:.9},children:t?x.jsx(Z_,{size:24}):x.jsx($_,{size:24})})]}),t&&x.jsxs(I.div,{initial:{opacity:0,height:0},animate:{opacity:1,height:"auto"},exit:{opacity:0,height:0},transition:{duration:.3,ease:[.16,1,.3,1]},className:"md:hidden mt-6 space-y-3",children:[o.map((a,l)=>x.jsx(I.a,{href:a.href,onClick:()=>e(!1),initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{duration:.3,delay:l*.05},className:`
+                `,whileHover:{scale:1.05},whileTap:{scale:.95},children:r("navigation.contact_me")})}),x.jsxs("div",{className:"flex items-baseline gap-2",children:[x.jsx(zm,{}),x.jsx(Vm,{})]})]}),x.jsx(I.button,{onClick:()=>e(!t),className:"md:hidden glass-strong p-3 rounded-xl",whileTap:{scale:.9},children:t?x.jsx(Z_,{size:24}):x.jsx($_,{size:24})})]}),t&&x.jsxs(I.div,{initial:{opacity:0,height:0},animate:{opacity:1,height:"auto"},exit:{opacity:0,height:0},transition:{duration:.3,ease:[.16,1,.3,1]},className:"md:hidden mt-6 space-y-3",children:[o.map((a,l)=>x.jsx(I.a,{href:a.href,onClick:()=>e(!1),initial:{opacity:0,x:-20},animate:{opacity:1,x:0},transition:{duration:.3,delay:l*.05},className:`
                   block px-6 py-4 rounded-xl
                   glass-strong
                   text-foreground/80 hover:text-foreground
