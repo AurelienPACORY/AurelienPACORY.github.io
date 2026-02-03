@@ -95,19 +95,22 @@
         "year": "2026 - 2028",
         "title": "MSc in Cybersecurity",
         "institution": "Cybersup - Courbevoie (92)",
-        "description": "Work-study Master of Science aiming for in-depth technical expertise in security (pentesting, SOC, DevSecOps, cloud) and governance (GRC). Preparation for professional certifications and a Level 7 RNCP Title."
+        "description": "Work-study Master of Science aiming for in-depth technical expertise in security (pentesting, SOC, DevSecOps, cloud) and governance (GRC). Preparation for professional certifications and a Level 7 RNCP Title.",
+        "logo": "/assets/cybersup-logo.svg"
       },
       {
         "year": "2023 - 2026",
         "title": "BUT in Networks & Telecommunications",
         "institution": "Specialization: Cybersecurity - IUT of Blois - Blois (41)",
-        "description": "Specialized training in networks, systems, and telecommunications, with a focus on cybersecurity."
+        "description": "Specialized training in networks, systems, and telecommunications, with a focus on cybersecurity.",
+        "logo": "/assets/iut-blois-logo.svg"
       },
       {
         "year": "2023",
         "title": "General Baccalaureate",
         "institution": "Specialties: Mathematics & Engineering Sciences - Lycée Notre Dame de Sion-Evry (91)",
-        "description": "Obtained the baccalaureate with a strong foundation in sciences."
+        "description": "Obtained the baccalaureate with a strong foundation in sciences.",
+        "logo": "/assets/sion-evry-logo.svg"
       }
     ],
     "languages": [

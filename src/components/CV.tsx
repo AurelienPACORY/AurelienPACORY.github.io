@@ -83,6 +83,7 @@ export const CV = () => {
                     <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-luxury-accent via-luxury-accent2 to-transparent" />
                     <div className="absolute left-0 top-2 w-3 h-3 bg-luxury-accent rounded-full ring-4 ring-background -translate-x-[5px]" />
                     <Card hover={false} className="group">
+                      {timeline.logo && <img src={timeline.logo} alt={`${timeline.title} logo`} className="w-16 h-16 object-contain mb-4 bg-white rounded-md p-1" />}
                       <div className="text-sm text-luxury-accent font-semibold mb-2">{timeline.year}</div>
                       <h4 className="text-xl font-display font-semibold mb-2 group-hover:gradient-text transition-all">{timeline.title}</h4>
                       <p className="text-muted-foreground mb-2">{timeline.institution}</p>
