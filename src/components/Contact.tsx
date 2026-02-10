@@ -60,10 +60,28 @@ export const Contact = () => {
 
   return (
     <section id="contact" ref={ref} className="py-32 relative overflow-hidden">
-      {/* ... (rest of the component is the same) ... */}
+      {/* Background */}
+      <div className="absolute inset-0 mesh-gradient opacity-20" />
+
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <motion.div /* ... */ >
-            {/* ... */}
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-20"
+        >
+          <div className="inline-flex items-center gap-2 glass px-6 py-3 rounded-full mb-6">
+            <MessageCircle className="w-5 h-5 text-luxury-accent" />
+            <span className="text-sm font-medium">{t('contact.section_title')}</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6 gradient-text">
+            {t('contact.main_title')}
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            {t('contact.main_description')}
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-12 max-w-7xl mx-auto">
