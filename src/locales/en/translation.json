@@ -154,11 +154,41 @@
     "skills_mobilized": "Skills utilized:",
     "list": [
       {
+        "year": "2026 - 2028",
+        "title": "MSc in Cybersecurity",
+        "company": "Cybersup",
+        "location": "Courbevoie (92)",
+        "logo": "/public/assets/cyber.png",
+        "summary": "Work-study Master of Science aiming for in-depth technical expertise in security (pentesting, SOC, DevSecOps, cloud) and governance (GRC). Preparation for professional certifications and a Level 7 RNCP Title.",
+        "missions": [],
+        "skills": ["Cybersecurity", "Pentesting", "SOC", "DevSecOps", "Cloud Security", "GRC"]
+      },
+      {
+        "year": "2023 - 2026",
+        "title": "BUT in Networks & Telecommunications",
+        "company": "IUT of Blois",
+        "location": "Blois (41)",
+        "logo": "/public/assets/blois.jpg",
+        "summary": "Specialized training in networks, systems, and telecommunications, with a focus on cybersecurity.",
+        "missions": [],
+        "skills": ["Networks", "Telecommunications", "Systems", "Cybersecurity"]
+      },
+      {
+        "year": "2023",
+        "title": "General Baccalaureate",
+        "company": "Lycée Notre Dame de Sion",
+        "location": "Evry (91)",
+        "logo": "/public/assets/sion.png",
+        "summary": "Obtained the baccalaureate with a strong foundation in sciences (Mathematics & Engineering Sciences).",
+        "missions": [],
+        "skills": ["Mathematics", "Engineering Sciences", "General Knowledge"]
+      },
+      {
         "year": "2025",
         "title": "Internship",
         "company": "SMART-IT",
         "location": "Paris - 15ème",
-        "logo": "/smart-it-logo.png",
+        "logo": "/public/assets/smart-it-logo.png",
         "summary": "This internship allowed me to consolidate my skills in networking, systems, cybersecurity, and technical support. It also taught me the importance of rigor, documentation, and clear communication with users from various backgrounds.",
         "missions": [
           {
@@ -208,7 +238,7 @@
         "title": "CTI Analyst (Apprenticeship)",
         "company": "Sopra Steria",
         "location": "Courbevoie (92)",
-        "logo": "/sopra logo.jpg",
+        "logo": "/public/assets/sopra logo.jpg",
         "summary": "Apprenticeship as a Cyber Threat Intelligence (CTI) analyst. Contributing to system protection through threat analysis and contextualization.",
         "missions": [
           {

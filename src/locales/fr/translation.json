@@ -95,19 +95,22 @@
         "year": "2026 - 2028",
         "title": "MSc Cybersécurité",
         "institution": "Cybersup - Courbevoie (92)",
-        "description": "Master of Science en alternance visant une expertise technique approfondie en sécurité (pentesting, SOC, DevSecOps, cloud) et en gouvernance (GRC). Préparation à des certifications professionnelles et au Titre RNCP de Niveau 7."
+        "description": "Master of Science en alternance visant une expertise technique approfondie en sécurité (pentesting, SOC, DevSecOps, cloud) et en gouvernance (GRC). Préparation à des certifications professionnelles et au Titre RNCP de Niveau 7.",
+        "logo": "/assets/cyber.png"
       },
       {
         "year": "2023 - 2026",
         "title": "BUT Réseaux & Télécommunications",
         "institution": "Parcours: Cybersécurité - IUT de Blois - Blois (41)",
-        "description": "Formation spécialisée en réseaux, systèmes et télécommunications, avec un focus sur la cybersécurité."
+        "description": "Formation spécialisée en réseaux, systèmes et télécommunications, avec un focus sur la cybersécurité.",
+        "logo": "/assets/blois.jpg"
       },
       {
         "year": "2023",
         "title": "Baccalauréat Général",
         "institution": "Spécialités: Mathématiques & Sciences de l'Ingénieur - Lycée Notre Dame de Sion-Evry (91)",
-        "description": "Obtention du baccalauréat avec une formation solide en sciences."
+        "description": "Obtention du baccalauréat avec une formation solide en sciences.",
+        "logo": "/assets/sion.png"
       }
     ],
     "languages": [
@@ -154,11 +157,41 @@
     "skills_mobilized": "Compétences mobilisées :",
     "list": [
       {
+        "year": "2026 - 2028",
+        "title": "MSc Cybersécurité",
+        "company": "Cybersup",
+        "location": "Courbevoie (92)",
+        "logo": "/public/assets/cyber.png",
+        "summary": "Master of Science en alternance visant une expertise technique approfondie en sécurité (pentesting, SOC, DevSecOps, cloud) et en gouvernance (GRC). Préparation à des certifications professionnelles et au Titre RNCP de Niveau 7.",
+        "missions": [],
+        "skills": ["Cybersécurité", "Pentesting", "SOC", "DevSecOps", "Sécurité Cloud", "GRC"]
+      },
+      {
+        "year": "2023 - 2026",
+        "title": "BUT Réseaux & Télécommunications",
+        "company": "IUT de Blois",
+        "location": "Blois (41)",
+        "logo": "/public/assets/blois.jpg",
+        "summary": "Formation spécialisée en réseaux, systèmes et télécommunications, avec un focus sur la cybersécurité.",
+        "missions": [],
+        "skills": ["Réseaux", "Télécommunications", "Systèmes", "Cybersécurité"]
+      },
+      {
+        "year": "2023",
+        "title": "Baccalauréat Général",
+        "company": "Lycée Notre Dame de Sion",
+        "location": "Evry (91)",
+        "logo": "/public/assets/sion.png",
+        "summary": "Obtention du baccalauréat avec une formation solide en sciences (Mathématiques & Sciences de l'Ingénieur).",
+        "missions": [],
+        "skills": ["Mathématiques", "Sciences de l'Ingénieur", "Culture Générale"]
+      },
+      {
         "year": "2025",
         "title": "Stage d'entreprise",
         "company": "SMART-IT",
         "location": "Paris - 15ème",
-        "logo": "/smart-it-logo.png",
+        "logo": "/public/assets/smart-it-logo.png",
         "summary": "Ce stage m’a permis de consolider mes compétences en réseau, systèmes, cybersécurité et support technique. Il m’a également appris l’importance de la rigueur, de la documentation et de la communication claire auprès d’utilisateurs aux profils variés.",
         "missions": [
           {
@@ -208,7 +241,7 @@
         "title": "Analyste CTI (Apprentissage)",
         "company": "Sopra Steria",
         "location": "Courbevoie (92)",
-        "logo": "/sopra logo.jpg",
+        "logo": "/public/assets/sopra logo.jpg",
         "summary": "Apprentissage en tant qu'analyste en Cyber Threat Intelligence (CTI). Contribution à la protection des systèmes par l'analyse et la contextualisation de la menace.",
         "missions": [
           {
