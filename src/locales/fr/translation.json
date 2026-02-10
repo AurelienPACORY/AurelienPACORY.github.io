@@ -157,36 +157,6 @@
     "skills_mobilized": "Compétences mobilisées :",
     "list": [
       {
-        "year": "2026 - 2028",
-        "title": "MSc Cybersécurité",
-        "company": "Cybersup",
-        "location": "Courbevoie (92)",
-        "logo": "/assets/cyber.png",
-        "summary": "Master of Science en alternance visant une expertise technique approfondie en sécurité (pentesting, SOC, DevSecOps, cloud) et en gouvernance (GRC). Préparation à des certifications professionnelles et au Titre RNCP de Niveau 7.",
-        "missions": [],
-        "skills": ["Cybersécurité", "Pentesting", "SOC", "DevSecOps", "Sécurité Cloud", "GRC"]
-      },
-      {
-        "year": "2023 - 2026",
-        "title": "BUT Réseaux & Télécommunications",
-        "company": "IUT de Blois",
-        "location": "Blois (41)",
-        "logo": "/assets/blois.jpg",
-        "summary": "Formation spécialisée en réseaux, systèmes et télécommunications, avec un focus sur la cybersécurité.",
-        "missions": [],
-        "skills": ["Réseaux", "Télécommunications", "Systèmes", "Cybersécurité"]
-      },
-      {
-        "year": "2023",
-        "title": "Baccalauréat Général",
-        "company": "Lycée Notre Dame de Sion",
-        "location": "Evry (91)",
-        "logo": "/assets/sion.png",
-        "summary": "Obtention du baccalauréat avec une formation solide en sciences (Mathématiques & Sciences de l'Ingénieur).",
-        "missions": [],
-        "skills": ["Mathématiques", "Sciences de l'Ingénieur", "Culture Générale"]
-      },
-      {
         "year": "2025 - 2026",
         "title": "Analyste CTI (Apprentissage)",
         "company": "Sopra Steria",
