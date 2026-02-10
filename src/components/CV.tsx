@@ -138,30 +138,6 @@ export const CV = () => {
                 ))}
               </motion.div>
             </div>
-
-            {/* Savoir-être */}
-            <div>
-              <motion.h3
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="text-2xl font-display font-bold mb-8 flex items-center gap-3"
-              >
-                <div className="w-2 h-8 bg-gradient-to-b from-luxury-accent to-luxury-accent2 rounded-full" />
-                {t('cv.soft_skills_title')}
-              </motion.h3>
-              <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
-                <Card hover={false}>
-                  <div className="grid grid-cols-2 gap-3">
-                    {softSkillsData.map((skill) => (
-                      <motion.span key={skill} variants={item} className="glass-strong text-sm font-medium px-4 py-2 rounded-full text-center">
-                        {skill}
-                      </motion.span>
-                    ))}
-                  </div>
-                </Card>
-              </motion.div>
-            </div>
           </div>
 
           {/* Column 2: Compétences */}
@@ -204,6 +180,40 @@ export const CV = () => {
               </motion.div>
             </div>
           </div>
+        </div>
+
+        {/* Savoir-être - Centered Section */}
+        <div className="mb-24">
+            <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-2xl font-display font-bold mb-8 flex items-center gap-3 justify-center"
+            >
+                <div className="w-2 h-8 bg-gradient-to-b from-luxury-accent to-luxury-accent2 rounded-full" />
+                {t('cv.soft_skills_title')}
+            </motion.h3>
+            <motion.div 
+              variants={container} 
+              initial="hidden" 
+              whileInView="show" 
+              viewport={{ once: true }}
+              className="max-w-3xl mx-auto"
+            >
+                <Card hover={false}>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    {softSkillsData.map((skill) => (
+                      <motion.span 
+                        key={skill} 
+                        variants={item} 
+                        className="glass-strong text-sm font-medium px-6 py-3 rounded-full text-center hover:bg-luxury-accent/10 transition-colors cursor-default border border-white/5"
+                      >
+                        {skill}
+                      </motion.span>
+                    ))}
+                  </div>
+                </Card>
+            </motion.div>
         </div>
         
         {/* Passions */}
