@@ -161,7 +161,7 @@
         "title": "MSc Cybersécurité",
         "company": "Cybersup",
         "location": "Courbevoie (92)",
-        "logo": "/public/assets/cyber.png",
+        "logo": "/assets/cyber.png",
         "summary": "Master of Science en alternance visant une expertise technique approfondie en sécurité (pentesting, SOC, DevSecOps, cloud) et en gouvernance (GRC). Préparation à des certifications professionnelles et au Titre RNCP de Niveau 7.",
         "missions": [],
         "skills": ["Cybersécurité", "Pentesting", "SOC", "DevSecOps", "Sécurité Cloud", "GRC"]
@@ -171,7 +171,7 @@
         "title": "BUT Réseaux & Télécommunications",
         "company": "IUT de Blois",
         "location": "Blois (41)",
-        "logo": "/public/assets/blois.jpg",
+        "logo": "/assets/blois.jpg",
         "summary": "Formation spécialisée en réseaux, systèmes et télécommunications, avec un focus sur la cybersécurité.",
         "missions": [],
         "skills": ["Réseaux", "Télécommunications", "Systèmes", "Cybersécurité"]
@@ -181,7 +181,7 @@
         "title": "Baccalauréat Général",
         "company": "Lycée Notre Dame de Sion",
         "location": "Evry (91)",
-        "logo": "/public/assets/sion.png",
+        "logo": "/assets/sion.png",
         "summary": "Obtention du baccalauréat avec une formation solide en sciences (Mathématiques & Sciences de l'Ingénieur).",
         "missions": [],
         "skills": ["Mathématiques", "Sciences de l'Ingénieur", "Culture Générale"]
@@ -191,7 +191,7 @@
         "title": "Stage d'entreprise",
         "company": "SMART-IT",
         "location": "Paris - 15ème",
-        "logo": "/public/assets/smart-it-logo.png",
+        "logo": "/smart-it-logo.png",
         "summary": "Ce stage m’a permis de consolider mes compétences en réseau, systèmes, cybersécurité et support technique. Il m’a également appris l’importance de la rigueur, de la documentation et de la communication claire auprès d’utilisateurs aux profils variés.",
         "missions": [
           {
@@ -241,7 +241,7 @@
         "title": "Analyste CTI (Apprentissage)",
         "company": "Sopra Steria",
         "location": "Courbevoie (92)",
-        "logo": "/public/assets/sopra logo.jpg",
+        "logo": "/sopra logo.jpg",
         "summary": "Apprentissage en tant qu'analyste en Cyber Threat Intelligence (CTI). Contribution à la protection des systèmes par l'analyse et la contextualisation de la menace.",
         "missions": [
           {

@@ -95,19 +95,22 @@
         "year": "2026 - 2028",
         "title": "MSc in Cybersecurity",
         "institution": "Cybersup - Courbevoie (92)",
-        "description": "Work-study Master of Science aiming for in-depth technical expertise in security (pentesting, SOC, DevSecOps, cloud) and governance (GRC). Preparation for professional certifications and a Level 7 RNCP Title."
+        "description": "Work-study Master of Science aiming for in-depth technical expertise in security (pentesting, SOC, DevSecOps, cloud) and governance (GRC). Preparation for professional certifications and a Level 7 RNCP Title.",
+        "logo": "/assets/cyber.png"
       },
       {
         "year": "2023 - 2026",
         "title": "BUT in Networks & Telecommunications",
         "institution": "Specialization: Cybersecurity - IUT of Blois - Blois (41)",
-        "description": "Specialized training in networks, systems, and telecommunications, with a focus on cybersecurity."
+        "description": "Specialized training in networks, systems, and telecommunications, with a focus on cybersecurity.",
+        "logo": "/assets/blois.jpg"
       },
       {
         "year": "2023",
         "title": "General Baccalaureate",
         "institution": "Specialties: Mathematics & Engineering Sciences - Lycée Notre Dame de Sion-Evry (91)",
-        "description": "Obtained the baccalaureate with a strong foundation in sciences."
+        "description": "Obtained the baccalaureate with a strong foundation in sciences.",
+        "logo": "/assets/sion.png"
       }
     ],
     "languages": [
@@ -158,7 +161,7 @@
         "title": "MSc in Cybersecurity",
         "company": "Cybersup",
         "location": "Courbevoie (92)",
-        "logo": "/public/assets/cyber.png",
+        "logo": "/assets/cyber.png",
         "summary": "Work-study Master of Science aiming for in-depth technical expertise in security (pentesting, SOC, DevSecOps, cloud) and governance (GRC). Preparation for professional certifications and a Level 7 RNCP Title.",
         "missions": [],
         "skills": ["Cybersecurity", "Pentesting", "SOC", "DevSecOps", "Cloud Security", "GRC"]
@@ -168,7 +171,7 @@
         "title": "BUT in Networks & Telecommunications",
         "company": "IUT of Blois",
         "location": "Blois (41)",
-        "logo": "/public/assets/blois.jpg",
+        "logo": "/assets/blois.jpg",
         "summary": "Specialized training in networks, systems, and telecommunications, with a focus on cybersecurity.",
         "missions": [],
         "skills": ["Networks", "Telecommunications", "Systems", "Cybersecurity"]
@@ -178,7 +181,7 @@
         "title": "General Baccalaureate",
         "company": "Lycée Notre Dame de Sion",
         "location": "Evry (91)",
-        "logo": "/public/assets/sion.png",
+        "logo": "/assets/sion.png",
         "summary": "Obtained the baccalaureate with a strong foundation in sciences (Mathematics & Engineering Sciences).",
         "missions": [],
         "skills": ["Mathematics", "Engineering Sciences", "General Knowledge"]
@@ -188,7 +191,7 @@
         "title": "Internship",
         "company": "SMART-IT",
         "location": "Paris - 15ème",
-        "logo": "/public/assets/smart-it-logo.png",
+        "logo": "/smart-it-logo.png",
         "summary": "This internship allowed me to consolidate my skills in networking, systems, cybersecurity, and technical support. It also taught me the importance of rigor, documentation, and clear communication with users from various backgrounds.",
         "missions": [
           {
@@ -238,7 +241,7 @@
         "title": "CTI Analyst (Apprenticeship)",
         "company": "Sopra Steria",
         "location": "Courbevoie (92)",
-        "logo": "/public/assets/sopra logo.jpg",
+        "logo": "/sopra logo.jpg",
         "summary": "Apprenticeship as a Cyber Threat Intelligence (CTI) analyst. Contributing to system protection through threat analysis and contextualization.",
         "missions": [
           {
