@@ -82,15 +82,27 @@ export const CV = () => {
                   >
                     <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-luxury-accent via-luxury-accent2 to-transparent" />
                     <div className="absolute left-0 top-2 w-3 h-3 bg-luxury-accent rounded-full ring-4 ring-background -translate-x-[5px]" />
-                    <Card hover={false} className="group">
-                      <div className="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-6 items-start">
+                    <Card hover={false} className="group/card">
+                      <div className="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-8 items-center">
                         {timeline.logo && (
-                                                      <img src={timeline.logo} alt={`${timeline.title} logo`} className="w-24 h-24 mx-auto md:mx-0 rounded-2xl object-contain bg-background" />                        )}
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-luxury-accent/10 blur-xl rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
+                            <div className="relative w-24 h-24 mx-auto md:mx-0 rounded-2xl glass-strong p-3 flex items-center justify-center border border-white/10 shadow-xl transform group-hover/card:scale-105 transition-transform duration-500">
+                              <img 
+                                src={timeline.logo} 
+                                alt={`${timeline.title} logo`} 
+                                className="w-full h-full object-contain" 
+                              />
+                            </div>
+                          </div>
+                        )}
                         <div className={!timeline.logo ? 'md:col-span-2' : ''}>
-                          <div className="text-sm text-luxury-accent font-semibold mb-2">{timeline.year}</div>
-                          <h4 className="text-xl font-display font-semibold mb-2 group-hover:gradient-text transition-all">{timeline.title}</h4>
-                          <p className="text-muted-foreground mb-2">{timeline.institution}</p>
-                          <p className="text-muted-foreground/80 text-sm">{timeline.description}</p>
+                          <div className="inline-block px-2 py-0.5 rounded-md bg-luxury-accent/10 text-luxury-accent text-xs font-bold mb-3 border border-luxury-accent/20">
+                            {timeline.year}
+                          </div>
+                          <h4 className="text-xl font-display font-semibold mb-2 group-hover/card:gradient-text transition-all">{timeline.title}</h4>
+                          <p className="text-muted-foreground font-medium mb-2">{timeline.institution}</p>
+                          <p className="text-muted-foreground/80 text-sm leading-relaxed">{timeline.description}</p>
                         </div>
                       </div>
                     </Card>
