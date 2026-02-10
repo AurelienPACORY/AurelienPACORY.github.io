@@ -242,7 +242,7 @@
     "main_description": "A question? A project? Feel free to contact me",
     "email": "Email",
     "location": "Location",
-    "location_value": "France, Paris",
+    "location_value": "Paris, France",
     "social_networks": "Social Networks",
     "first_name": "First Name*",
     "last_name": "Last Name*",
@@ -260,7 +260,7 @@
     "honeypot_label": "Do not fill this field"
   },
   "footer": {
-    "copyright_name": "Aurélien Pacory - France, Paris",
+    "copyright_name": "Aurélien Pacory - Paris, France",
     "back_to_top": "Back to top ↑"
   }
 }
