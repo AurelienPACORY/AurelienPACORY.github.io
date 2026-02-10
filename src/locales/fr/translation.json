@@ -187,6 +187,27 @@
         "skills": ["Mathématiques", "Sciences de l'Ingénieur", "Culture Générale"]
       },
       {
+        "year": "2025 - 2026",
+        "title": "Analyste CTI (Apprentissage)",
+        "company": "Sopra Steria",
+        "location": "Courbevoie (92)",
+        "logo": "/sopra logo.jpg",
+        "summary": "Apprentissage en tant qu'analyste en Cyber Threat Intelligence (CTI). Contribution à la protection des systèmes par l'analyse et la contextualisation de la menace.",
+        "missions": [
+          {
+            "category": "Analyse de la Menace",
+            "tasks": [
+              "Analyse de rapports sur les menaces (Threat Intelligence reports)",
+              "Identification des TTPs (Tactics, Techniques, and Procedures) et IOCs (Indicators of Compromise)",
+              "Utilisation de la matrice MITRE ATT&CK",
+              "Contribution à la plateforme OpenCTI"
+            ],
+            "icon": "Shield"
+          }
+        ],
+        "skills": ["MITRE ATT&CK", "OpenCTI", "TTPs", "IOCs"]
+      },
+      {
         "year": "2025",
         "title": "Stage d'entreprise",
         "company": "SMART-IT",
@@ -235,27 +256,6 @@
           "Analyse technique de sites malveillants",
           "Réactivité face aux situations à risque"
         ]
-      },
-      {
-        "year": "2025 - 2026",
-        "title": "Analyste CTI (Apprentissage)",
-        "company": "Sopra Steria",
-        "location": "Courbevoie (92)",
-        "logo": "/sopra logo.jpg",
-        "summary": "Apprentissage en tant qu'analyste en Cyber Threat Intelligence (CTI). Contribution à la protection des systèmes par l'analyse et la contextualisation de la menace.",
-        "missions": [
-          {
-            "category": "Analyse de la Menace",
-            "tasks": [
-              "Analyse de rapports sur les menaces (Threat Intelligence reports)",
-              "Identification des TTPs (Tactics, Techniques, and Procedures) et IOCs (Indicators of Compromise)",
-              "Utilisation de la matrice MITRE ATT&CK",
-              "Contribution à la plateforme OpenCTI"
-            ],
-            "icon": "Shield"
-          }
-        ],
-        "skills": ["MITRE ATT&CK", "OpenCTI", "TTPs", "IOCs"]
       }
     ]
   },

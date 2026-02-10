@@ -187,6 +187,27 @@
         "skills": ["Mathematics", "Engineering Sciences", "General Knowledge"]
       },
       {
+        "year": "2025 - 2026",
+        "title": "CTI Analyst (Apprenticeship)",
+        "company": "Sopra Steria",
+        "location": "Courbevoie (92)",
+        "logo": "/sopra logo.jpg",
+        "summary": "Apprenticeship as a Cyber Threat Intelligence (CTI) analyst. Contributing to system protection through threat analysis and contextualization.",
+        "missions": [
+          {
+            "category": "Threat Analysis",
+            "tasks": [
+              "Analyzing Threat Intelligence reports",
+              "Identifying TTPs (Tactics, Techniques, and Procedures) and IOCs (Indicators of Compromise)",
+              "Utilizing the MITRE ATT&CK framework",
+              "Contributing to the OpenCTI platform"
+            ],
+            "icon": "Shield"
+          }
+        ],
+        "skills": ["MITRE ATT&CK", "OpenCTI", "TTPs", "IOCs"]
+      },
+      {
         "year": "2025",
         "title": "Internship",
         "company": "SMART-IT",
@@ -235,27 +256,6 @@
           "Technical analysis of malicious websites",
           "Reactivity to at-risk situations"
         ]
-      },
-      {
-        "year": "2025 - 2026",
-        "title": "CTI Analyst (Apprenticeship)",
-        "company": "Sopra Steria",
-        "location": "Courbevoie (92)",
-        "logo": "/sopra logo.jpg",
-        "summary": "Apprenticeship as a Cyber Threat Intelligence (CTI) analyst. Contributing to system protection through threat analysis and contextualization.",
-        "missions": [
-          {
-            "category": "Threat Analysis",
-            "tasks": [
-              "Analyzing Threat Intelligence reports",
-              "Identifying TTPs (Tactics, Techniques, and Procedures) and IOCs (Indicators of Compromise)",
-              "Utilizing the MITRE ATT&CK framework",
-              "Contributing to the OpenCTI platform"
-            ],
-            "icon": "Shield"
-          }
-        ],
-        "skills": ["MITRE ATT&CK", "OpenCTI", "TTPs", "IOCs"]
       }
     ]
   },
