@@ -5,7 +5,9 @@
     "projects": "Projets",
     "experiences": "Expériences",
     "contact": "Contact",
-    "contact_me": "Me contacter"
+    "contact_me": "Me contacter",
+    "change_language": "Changer de langue",
+    "toggle_theme": "Changer le thème"
   },
   "hero": {
     "badge": "Portfolio 2026",
@@ -77,6 +79,11 @@
     "soft_skills_title": "Savoir-être",
     "skills_title": "Compétences",
     "skills": {
+       "categories": {
+          "network": "Réseaux",
+          "system": "Systèmes",
+          "dev": "Développement"
+       },
        "list": [
           { "name": "Réseaux & Protocoles", "level": 85, "category": "network" },
           { "name": "Cisco/Packet Tracer", "level": 80, "category": "network" },
@@ -235,6 +242,7 @@
     "main_description": "Une question ? Un projet ? N'hésitez pas à me contacter",
     "email": "Email",
     "location": "Localisation",
+    "location_value": "France, Paris",
     "social_networks": "Réseaux sociaux",
     "first_name": "Prénom*",
     "last_name": "Nom de famille*",

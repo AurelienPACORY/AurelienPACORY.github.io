@@ -85,8 +85,48 @@ export const Contact = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-5 gap-12 max-w-7xl mx-auto">
-          <motion.div /* ... */ >
-            {/* ... */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="lg:col-span-2 space-y-8"
+          >
+            <Card delay={0.2} className="h-full">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <Mail className="w-6 h-6 text-luxury-accent" />
+                    {t('contact.email')}
+                  </h3>
+                  <a href={`mailto:${CONTACT_INFO.email}`} className="text-lg hover:text-luxury-accent transition-colors">
+                    {CONTACT_INFO.email}
+                  </a>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <MapPin className="w-6 h-6 text-luxury-accent" />
+                    {t('contact.location')}
+                  </h3>
+                  <p className="text-lg text-muted-foreground">
+                    {t('contact.location_value')}
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                    <Github className="w-6 h-6 text-luxury-accent" />
+                    {t('contact.social_networks')}
+                  </h3>
+                  <div className="flex gap-4">
+                    <a href={CONTACT_INFO.github} target="_blank" rel="noopener noreferrer" className="w-12 h-12 glass rounded-xl flex items-center justify-center hover:bg-luxury-accent/10 transition-colors">
+                      <Github className="w-6 h-6" />
+                    </a>
+                    <a href={CONTACT_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="w-12 h-12 glass rounded-xl flex items-center justify-center hover:bg-luxury-accent/10 transition-colors">
+                      <Linkedin className="w-6 h-6" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </motion.div>
 
           <motion.div

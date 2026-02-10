@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
       size="icon"
       onClick={toggleLanguage}
       className="font-semibold text-sm"
-      aria-label="Changer de langue"
+      aria-label={t('navigation.change_language')}
     >
       {currentLang.startsWith('fr') ? 'EN' : 'FR'}
     </Button>

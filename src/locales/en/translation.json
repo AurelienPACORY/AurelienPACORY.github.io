@@ -5,7 +5,9 @@
     "projects": "Projects",
     "experiences": "Experience",
     "contact": "Contact",
-    "contact_me": "Contact Me"
+    "contact_me": "Contact Me",
+    "change_language": "Change language",
+    "toggle_theme": "Toggle theme"
   },
   "hero": {
     "badge": "Portfolio 2026",
@@ -77,6 +79,11 @@
     "soft_skills_title": "Soft Skills",
     "skills_title": "Skills",
      "skills": {
+       "categories": {
+          "network": "Networks",
+          "system": "Systems",
+          "dev": "Development"
+       },
        "list": [
           { "name": "Networks & Protocols", "level": 85, "category": "network" },
           { "name": "Cisco/Packet Tracer", "level": 80, "category": "network" },
@@ -146,7 +153,7 @@
       "Time management",
       "Writing",
       "Autonomy",
-      "Punctual"
+      "Punctuality"
     ]
   },
   "experiences": {
@@ -235,6 +242,7 @@
     "main_description": "A question? A project? Feel free to contact me",
     "email": "Email",
     "location": "Location",
+    "location_value": "France, Paris",
     "social_networks": "Social Networks",
     "first_name": "First Name*",
     "last_name": "Last Name*",

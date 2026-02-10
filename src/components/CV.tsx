@@ -173,7 +173,9 @@ export const CV = () => {
                           className="absolute top-0 left-0 h-full bg-gradient-to-r from-luxury-accent to-luxury-accent2 rounded-full"
                         />
                       </div>
-                      <div className="mt-2 text-xs text-muted-foreground uppercase tracking-wider">{skill.category}</div>
+                      <div className="mt-2 text-xs text-muted-foreground uppercase tracking-wider">
+                        {t(`cv.skills.categories.${skill.category}`)}
+                      </div>
                     </Card>
                   </motion.div>
                 ))}
