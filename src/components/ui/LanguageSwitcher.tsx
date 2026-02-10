@@ -4,6 +4,7 @@ import { Button } from './Button';
 export function LanguageSwitcher() {
   const { i18n, t } = useTranslation();
   const currentLang = i18n.language;
+  const changeLanguageLabel = t('navigation.change_language');
 
   const toggleLanguage = () => {
     i18n.changeLanguage(currentLang.startsWith('fr') ? 'en' : 'fr');
@@ -15,7 +16,7 @@ export function LanguageSwitcher() {
       size="icon"
       onClick={toggleLanguage}
       className="font-semibold text-sm"
-      aria-label={t('navigation.change_language')}
+      aria-label={changeLanguageLabel}
     >
       {currentLang.startsWith('fr') ? 'EN' : 'FR'}
     </Button>
