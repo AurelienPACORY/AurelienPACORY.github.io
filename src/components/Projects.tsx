@@ -8,8 +8,8 @@ export const Projects = () => {
   const { ref } = useScrollAnimation({ triggerOnce: true });
   const { t } = useTranslation();
   
-  const categories = t('projects.categories', { returnObjects: true }) as Array<string>;
-  const projectsData = t('projects.list', { returnObjects: true }) as Array<any>;
+  const categories = (t('projects.categories', { returnObjects: true }) || []) as Array<string>;
+  const projectsData = (t('projects.list', { returnObjects: true }) || []) as Array<any>;
 
   const [filter, setFilter] = useState(categories[0]);
   const [hoveredId, setHoveredId] = useState<number | null>(null);

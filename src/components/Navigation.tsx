@@ -10,7 +10,7 @@ export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollY } = useScroll();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const menuItems = [
     { name: t('navigation.about'), href: '#hero' },

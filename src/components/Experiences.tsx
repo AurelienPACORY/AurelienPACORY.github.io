@@ -15,7 +15,7 @@ export const Experiences = () => {
   const { ref } = useScrollAnimation({ triggerOnce: true });
   const { t } = useTranslation();
 
-  const experiencesData = t('experiences.list', { returnObjects: true }) as Array<any>;
+  const experiencesData = (t('experiences.list', { returnObjects: true }) || []) as Array<any>;
 
   return (
     <section id="experiences" ref={ref} className="py-32 relative overflow-hidden">
