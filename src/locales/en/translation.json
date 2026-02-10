@@ -34,7 +34,7 @@
         "description": "Implementation of a complete network infrastructure with VLANs, inter-VLAN routing, and security.",
         "category": "Networks",
         "tags": ["Cisco", "VLANs", "Routing", "Security"],
-        "image": "/assets/project1.jpg",
+        "image": "./assets/project1.jpg",
         "github": "#",
         "demo": "#"
       },
@@ -44,7 +44,7 @@
         "description": "Deployment of a web server cluster with load balancing and redundancy.",
         "category": "Systems",
         "tags": ["Linux", "Nginx", "Docker", "HA"],
-        "image": "/assets/project2.jpg",
+        "image": "./assets/project2.jpg",
         "github": "#",
         "demo": "#"
       },
@@ -54,7 +54,7 @@
         "description": "Python application for real-time analysis and visualization of network traffic.",
         "category": "Development",
         "tags": ["Python", "Scapy", "Wireshark", "Data Viz"],
-        "image": "/assets/project3.jpg",
+        "image": "./assets/project3.jpg",
         "github": "#",
         "demo": "#"
       },
@@ -64,7 +64,7 @@
         "description": "Implementation of an IP telephony solution with Asterisk.",
         "category": "Networks",
         "tags": ["VoIP", "Asterisk", "SIP", "QoS"],
-        "image": "/assets/project4.jpg",
+        "image": "./assets/project4.jpg",
         "github": "#",
         "demo": "#"
       }
@@ -103,21 +103,21 @@
         "title": "MSc in Cybersecurity",
         "institution": "Cybersup - Courbevoie (92)",
         "description": "Work-study Master of Science aiming for in-depth technical expertise in security (pentesting, SOC, DevSecOps, cloud) and governance (GRC). Preparation for professional certifications and a Level 7 RNCP Title.",
-        "logo": "/assets/cyber.png"
+        "logo": "./assets/cyber.png"
       },
       {
         "year": "2023 - 2026",
         "title": "BUT in Networks & Telecommunications",
         "institution": "Specialization: Cybersecurity - IUT of Blois - Blois (41)",
         "description": "Specialized training in networks, systems, and telecommunications, with a focus on cybersecurity.",
-        "logo": "/assets/blois.jpg"
+        "logo": "./assets/blois.jpg"
       },
       {
         "year": "2023",
         "title": "General Baccalaureate",
         "institution": "Specialties: Mathematics & Engineering Sciences - Lycée Notre Dame de Sion-Evry (91)",
         "description": "Obtained the baccalaureate with a strong foundation in sciences.",
-        "logo": "/assets/sion.png"
+        "logo": "./assets/sion.png"
       }
     ],
     "languages": [
@@ -168,7 +168,7 @@
         "title": "CTI Analyst (Apprenticeship)",
         "company": "Sopra Steria",
         "location": "Courbevoie (92)",
-        "logo": "/sopra-logo.jpg",
+        "logo": "./sopra-logo.jpg",
         "summary": "Apprenticeship as a Cyber Threat Intelligence (CTI) analyst. Contributing to system protection through threat analysis and contextualization.",
         "missions": [
           {
@@ -189,7 +189,7 @@
         "title": "Internship",
         "company": "SMART-IT",
         "location": "Paris - 15ème",
-        "logo": "/smart-it-logo.png",
+        "logo": "./smart-it-logo.png",
         "summary": "This internship allowed me to consolidate my skills in networking, systems, cybersecurity, and technical support. It also taught me the importance of rigor, documentation, and clear communication with users from various backgrounds.",
         "missions": [
           {

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Button } from './Button';
 
 export function LanguageSwitcher() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const currentLang = i18n.language;
 
   const toggleLanguage = () => {
