@@ -51,22 +51,22 @@ export const Experiences = () => {
                     <Card>
                         <div className="flex flex-col md:flex-row gap-8">
                             {/* Logo and Company Info */}
-                            <div className="md:w-1/4 text-center md:text-left">
+                            <div className="md:w-1/3 text-center md:text-left">
                                 {exp.logo && (
                                   <div className="relative inline-block mb-6 group/logo">
-                                    <div className="absolute inset-0 bg-luxury-accent/20 blur-2xl rounded-full opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500" />
-                                    <div className="relative w-28 h-28 mx-auto md:mx-0 rounded-3xl glass-strong p-4 flex items-center justify-center border border-white/10 shadow-2xl transform group-hover/logo:scale-105 transition-transform duration-500">
+                                    <div className="absolute inset-0 bg-luxury-accent/25 blur-2xl rounded-xl opacity-0 group-hover/logo:opacity-100 transition-opacity duration-500" />
+                                    <div className="relative w-48 h-28 mx-auto md:mx-0 rounded-2xl glass-strong p-3 flex items-center justify-center border border-white/10 shadow-2xl transform group-hover/logo:scale-[1.03] transition-all duration-500 bg-white/5">
                                       <img 
                                         src={exp.logo} 
                                         alt={`${exp.company} logo`} 
-                                        className="w-full h-full object-contain filter drop-shadow-sm" 
+                                        className="w-full h-full object-contain filter drop-shadow-md" 
                                       />
                                     </div>
                                   </div>
                                 )}
-                                <h3 className="text-2xl font-bold mb-1">{exp.company}</h3>
-                                <p className="text-muted-foreground text-sm mb-3">{exp.location}</p>
-                                <span className="inline-flex items-center px-3 py-1 rounded-full bg-luxury-accent/10 text-luxury-accent text-xs font-bold border border-luxury-accent/20">
+                                <h3 className="text-2xl font-bold mb-1 tracking-tight">{exp.company}</h3>
+                                <p className="text-muted-foreground text-sm mb-4">{exp.location}</p>
+                                <span className="inline-flex items-center px-4 py-1.5 rounded-lg bg-luxury-accent/10 text-luxury-accent text-xs font-bold border border-luxury-accent/20 tracking-wider">
                                   {exp.year}
                                 </span>
                             </div>

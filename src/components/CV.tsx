@@ -86,8 +86,8 @@ export const CV = () => {
                       <div className="grid grid-cols-1 md:grid-cols-[auto,1fr] gap-8 items-center">
                         {timeline.logo && (
                           <div className="relative">
-                            <div className="absolute inset-0 bg-luxury-accent/10 blur-xl rounded-full opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
-                            <div className="relative w-24 h-24 mx-auto md:mx-0 rounded-2xl glass-strong p-3 flex items-center justify-center border border-white/10 shadow-xl transform group-hover/card:scale-105 transition-transform duration-500">
+                            <div className="absolute inset-0 bg-luxury-accent/15 blur-xl rounded-xl opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
+                            <div className="relative w-40 h-24 mx-auto md:mx-0 rounded-xl glass-strong p-3 flex items-center justify-center border border-white/10 shadow-xl transform group-hover/card:scale-[1.03] transition-all duration-500 bg-white/5">
                               <img 
                                 src={timeline.logo} 
                                 alt={`${timeline.title} logo`} 
@@ -97,11 +97,11 @@ export const CV = () => {
                           </div>
                         )}
                         <div className={!timeline.logo ? 'md:col-span-2' : ''}>
-                          <div className="inline-block px-2 py-0.5 rounded-md bg-luxury-accent/10 text-luxury-accent text-xs font-bold mb-3 border border-luxury-accent/20">
+                          <div className="inline-block px-2.5 py-1 rounded-md bg-luxury-accent/10 text-luxury-accent text-[10px] font-black uppercase tracking-widest mb-3 border border-luxury-accent/20">
                             {timeline.year}
                           </div>
-                          <h4 className="text-xl font-display font-semibold mb-2 group-hover/card:gradient-text transition-all">{timeline.title}</h4>
-                          <p className="text-muted-foreground font-medium mb-2">{timeline.institution}</p>
+                          <h4 className="text-xl font-display font-semibold mb-2 group-hover/card:gradient-text transition-all tracking-tight">{timeline.title}</h4>
+                          <p className="text-muted-foreground font-semibold text-sm mb-2">{timeline.institution}</p>
                           <p className="text-muted-foreground/80 text-sm leading-relaxed">{timeline.description}</p>
                         </div>
                       </div>
