@@ -1,6 +1,6 @@
 # [AP] PORTFOLIO - BRUTALIST DESIGN
 
-Portfolio brutalist ultra-moderne pour Aurélien Pacory, étudiant en BUT Réseaux et Télécommunications.
+Portfolio brutalist ultra-moderne pour Aurélien Pacory, étudiant en cybersécurité.
 
 ## 🎨 DESIGN PHILOSOPHY
 

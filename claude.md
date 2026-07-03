@@ -2,7 +2,7 @@
 
 ## Vue d'ensemble
 
-Portfolio moderne et interactif pour Aurélien Pacory, étudiant en BUT Réseaux et Télécommunications.
+Portfolio moderne et interactif pour Aurélien Pacory, étudiant en cybersécurité.
 
 ## Objectifs
 
