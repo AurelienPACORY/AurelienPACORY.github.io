@@ -11,12 +11,17 @@ export const Projects = () => {
   const categories = (t('projects.categories', { returnObjects: true }) || []) as Array<string>;
   const projectsData = (t('projects.list', { returnObjects: true }) || []) as Array<any>;
 
-  const [filter, setFilter] = useState(categories[0]);
+  const [filter, setFilter] = useState<string>('');
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
-  const filteredProjects = filter === categories[0]
-    ? projectsData
-    : projectsData.filter(p => p.category === filter);
+  // Set initial filter once categories are loaded
+  if (filter === '' && categories.length > 0) {
+    setFilter(categories[0]);
+  }
+
+  const filteredProjects = (filter === '' || (categories.length > 0 && filter === categories[0]))
+    ? (Array.isArray(projectsData) ? projectsData : [])
+    : (Array.isArray(projectsData) ? projectsData.filter(p => p.category === filter) : []);
 
   return (
     <section id="projects" ref={ref} className="py-32 relative overflow-hidden">

@@ -23,6 +23,7 @@ i18n
     resources,
     fallbackLng: 'fr', // fallback language is French
     debug: true, // enable debug mode for development
+    returnObjects: true,
 
     interpolation: {
       escapeValue: false, // react already safes from xss
