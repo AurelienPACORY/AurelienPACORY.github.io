@@ -1,7 +1,6 @@
 import { CV } from './components/CV';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { Hero } from './components/Hero';
 import { Navigation } from './components/Navigation';
 import { Projects } from './components/Projects';
 import { ParticlesBackground } from './components/ui/ParticlesBackground';
@@ -12,7 +11,6 @@ function App() {
     <div className="min-h-screen">
       <ParticlesBackground />
       <Navigation />
-      <Hero />
       <CV />
       <Projects />
       <Experiences />

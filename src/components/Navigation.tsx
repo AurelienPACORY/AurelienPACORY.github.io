@@ -13,7 +13,6 @@ export const Navigation = () => {
   const { t, i18n } = useTranslation();
 
   const menuItems = [
-    { name: t('navigation.about'), href: '#hero' },
     { name: t('navigation.formations'), href: '#cv' },
     { name: t('navigation.projects'), href: '#projects' },
     { name: t('navigation.experiences'), href: '#experiences' },
@@ -42,7 +41,11 @@ export const Navigation = () => {
         <div className="flex items-baseline justify-between">
           {/* Logo */}
           <motion.a
-            href="#hero"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
             className="relative group"
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 400, damping: 17 }}
