@@ -13,6 +13,7 @@ export const Navigation = () => {
   const { t, i18n } = useTranslation();
 
   const menuItems = [
+    { name: t('navigation.about'), href: '#about' },
     { name: t('navigation.formations'), href: '#cv' },
     { name: t('navigation.projects'), href: '#projects' },
     { name: t('navigation.experiences'), href: '#experiences' },
@@ -38,31 +39,9 @@ export const Navigation = () => {
       `}
     >
       <div className="container mx-auto px-6 md:px-12">
-        <div className="flex items-baseline justify-between">
-          {/* Logo */}
-          <motion.a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-            className="relative group"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-          >
-            <span className="text-2xl md:text-3xl font-display font-bold gradient-text">
-              Aurélien Pacory
-            </span>
-            <motion.div
-              className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-luxury-accent to-luxury-accent2"
-              initial={{ width: 0 }}
-              whileHover={{ width: '100%' }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.a>
-
+        <div className="flex items-center justify-end md:grid md:grid-cols-[1fr_auto_1fr] md:items-center">
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-baseline gap-2">
+          <div className="hidden md:flex items-baseline gap-2 md:col-start-2 md:justify-self-center">
             {menuItems.map((item, index) => {
               const isActive = activeSection === item.href.substring(1);
               return (
@@ -96,7 +75,7 @@ export const Navigation = () => {
           </div>
 
           {/* Right-side controls */}
-          <div className="hidden md:flex items-baseline gap-4">
+          <div className="hidden md:flex items-baseline gap-4 md:col-start-3 md:justify-self-end">
             <motion.a
               href="#contact"
               className="hidden md:block"

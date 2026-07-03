@@ -1,5 +1,6 @@
 {
   "navigation": {
+    "about": "À propos",
     "formations": "Formations",
     "projects": "Projets",
     "experiences": "Expériences",
@@ -7,6 +8,13 @@
     "contact_me": "Me contacter",
     "change_language": "Changer de langue",
     "toggle_theme": "Changer le thème"
+  },
+  "about": {
+    "section_title": "À propos",
+    "main_title": "Aurélien Pacory",
+    "role_title": "Étudiant en cybersécurité",
+    "view_projects": "Voir mes projets",
+    "description": "Actuellement étudiant en cybersécurité, je me passionne pour l’univers de l’informatique, et plus particulièrement pour la protection des réseaux et des systèmes. Curieux de nature et toujours en quête de nouveaux défis, j’ai choisi d’orienter mon parcours vers ce domaine en constante évolution.<br/><br/>C’est au fil de mes études que la cybersécurité s’est imposée comme une évidence : dans un monde toujours plus connecté, garantir la protection des systèmes et des données est devenu un enjeu majeur. Je souhaite contribuer à cette mission en concevant des solutions toujours plus sûres, efficaces et adaptées aux menaces actuelles.<br/><br/>J’aime apprendre, expérimenter et créer, que ce soit à travers des projets personnels ou en entreprise, et je prends plaisir à mettre mes compétences en pratique pour progresser continuellement.<br/><br/>Si vous souhaitez en savoir plus sur moi ou échanger, n’hésitez pas à explorer ce site… ou à <a href='#download-cv-button' class='underline text-luxury-accent hover:text-luxury-accent2 transition-colors'>télécharger mon CV</a> !"
   },
   "projects": {
     "section_title": "Réalisations",

@@ -1,3 +1,4 @@
+import { About } from './components/About';
 import { CV } from './components/CV';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -11,6 +12,7 @@ function App() {
     <div className="min-h-screen">
       <ParticlesBackground />
       <Navigation />
+      <About />
       <CV />
       <Projects />
       <Experiences />

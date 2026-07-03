@@ -11,17 +11,12 @@ export const Projects = () => {
   const categories = (t('projects.categories', { returnObjects: true }) || []) as Array<string>;
   const projectsData = (t('projects.list', { returnObjects: true }) || []) as Array<any>;
 
-  const [filter, setFilter] = useState<string>('');
+  const [filterIndex, setFilterIndex] = useState(0);
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
-  // Set initial filter once categories are loaded
-  if (filter === '' && categories.length > 0) {
-    setFilter(categories[0]);
-  }
-
-  const filteredProjects = (filter === '' || (categories.length > 0 && filter === categories[0]))
+  const filteredProjects = filterIndex === 0
     ? (Array.isArray(projectsData) ? projectsData : [])
-    : (Array.isArray(projectsData) ? projectsData.filter(p => p.category === filter) : []);
+    : (Array.isArray(projectsData) ? projectsData.filter(p => p.category === categories[filterIndex]) : []);
 
   return (
     <section id="projects" ref={ref} className="py-32 relative overflow-hidden">
@@ -58,17 +53,17 @@ export const Projects = () => {
         >
           {categories.map((category, index) => (
             <motion.button
-              key={category}
+              key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setFilter(category)}
+              onClick={() => setFilterIndex(index)}
               className={`
                 px-6 py-3 rounded-xl font-medium transition-all duration-300
-                ${filter === category
+                ${filterIndex === index
                   ? 'bg-gradient-to-r from-luxury-accent to-luxury-accent2 text-primary-foreground glow-effect'
                   : 'glass text-muted-foreground hover:text-foreground hover:glass-strong'
                 }
@@ -137,9 +132,9 @@ export const Projects = () => {
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
+                    {project.tags.map((tag, tagIndex) => (
                       <span
-                        key={tag}
+                        key={tagIndex}
                         className="text-xs px-3 py-1 glass rounded-full text-muted-foreground"
                       >
                         {tag}

@@ -34,11 +34,7 @@ export const Footer = () => {
           className="mt-8"
         >
           <a
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+            href="#about"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-luxury-accent transition-colors"
           >
             {t('footer.back_to_top')}

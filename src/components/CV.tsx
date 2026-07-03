@@ -123,8 +123,8 @@ export const CV = () => {
                 {t('cv.languages_title')}
               </motion.h3>
               <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-4">
-                {languagesData.map((lang) => (
-                  <motion.div key={lang.name} variants={item}>
+                {languagesData.map((lang, index) => (
+                  <motion.div key={index} variants={item}>
                     <Card hover={false}>
                       <div className="flex items-center gap-4">
                         <span className="text-3xl">{lang.flag}</span>
@@ -154,8 +154,8 @@ export const CV = () => {
                 {t('cv.skills_title')}
               </motion.h3>
               <motion.div variants={container} initial="hidden" whileInView="show" viewport={{ once: true }} className="space-y-4">
-                {skillsData.map((skill) => (
-                  <motion.div key={skill.name} variants={item}>
+                {skillsData.map((skill, index) => (
+                  <motion.div key={index} variants={item}>
                     <Card hover={false} className="group">
                       <div className="flex items-center justify-between mb-3">
                         <div className="flex items-center gap-3">
@@ -204,10 +204,10 @@ export const CV = () => {
             >
                 <Card hover={false}>
                   <div className="flex flex-wrap justify-center gap-4">
-                    {softSkillsData.map((skill) => (
-                      <motion.span 
-                        key={skill} 
-                        variants={item} 
+                    {softSkillsData.map((skill, index) => (
+                      <motion.span
+                        key={index}
+                        variants={item}
                         className="glass-strong text-sm font-medium px-6 py-3 rounded-full text-center hover:bg-luxury-accent/10 transition-colors cursor-default border border-white/5"
                       >
                         {skill}
@@ -236,8 +236,8 @@ export const CV = () => {
               viewport={{ once: true }} 
               className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
-                {hobbiesData.map((hobby) => (
-                    <motion.div key={hobby.title} variants={item}>
+                {hobbiesData.map((hobby, index) => (
+                    <motion.div key={index} variants={item}>
                         <Card>
                             <div className="flex flex-col items-center text-center">
                                 <span className="text-4xl mb-4">{hobby.icon}</span>

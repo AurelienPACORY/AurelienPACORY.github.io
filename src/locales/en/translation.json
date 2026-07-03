@@ -1,5 +1,6 @@
 {
   "navigation": {
+    "about": "About",
     "formations": "Education",
     "projects": "Projects",
     "experiences": "Experience",
@@ -7,6 +8,13 @@
     "contact_me": "Contact Me",
     "change_language": "Change language",
     "toggle_theme": "Toggle theme"
+  },
+  "about": {
+    "section_title": "About",
+    "main_title": "Aurélien Pacory",
+    "role_title": "Student in Cybersecurity",
+    "view_projects": "View My Projects",
+    "description": "Currently a cybersecurity student, I'm passionate about the world of IT, and more specifically about protecting networks and systems. Naturally curious and always looking for new challenges, I chose to build my path in this fast-evolving field.<br/><br/>It was throughout my studies that cybersecurity became an obvious calling: in an increasingly connected world, protecting systems and data has become a major challenge. I want to contribute to this mission by building solutions that are ever safer, more efficient, and adapted to today's threats.<br/><br/>I love learning, experimenting, and building, whether through personal projects or in a professional setting, and I enjoy putting my skills into practice to keep growing.<br/><br/>If you'd like to know more about me or get in touch, feel free to explore this site... or <a href='#download-cv-button' class='underline text-luxury-accent hover:text-luxury-accent2 transition-colors'>download my CV</a>!"
   },
   "projects": {
     "section_title": "Works",
