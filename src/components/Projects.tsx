@@ -188,12 +188,12 @@ export const Projects = () => {
       >
         {selectedProject && (
           <>
-            <div className="relative h-56 md:h-72 w-full overflow-hidden rounded-t-3xl bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20">
+            <div className="relative h-64 md:h-[28rem] w-full overflow-hidden rounded-t-3xl bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20">
               {selectedProject.image ? (
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain p-4"
                 />
               ) : (
                 <>
@@ -285,7 +285,7 @@ export const Projects = () => {
                     <div className="grid sm:grid-cols-2 gap-3 mb-4">
                       {selectedProject.gallery.map((img: { src: string; caption?: string }, imgIndex: number) => (
                         <div key={imgIndex} className="rounded-xl overflow-hidden glass">
-                          <img src={img.src} alt={img.caption || selectedProject.title} className="w-full h-40 object-cover" />
+                          <img src={img.src} alt={img.caption || selectedProject.title} className="w-full h-40 object-contain bg-black/20 p-2" />
                           {img.caption && (
                             <p className="text-xs text-muted-foreground p-2">{img.caption}</p>
                           )}
