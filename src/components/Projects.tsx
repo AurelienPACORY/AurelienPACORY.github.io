@@ -282,10 +282,10 @@ export const Projects = () => {
                   )}
 
                   {selectedProject.gallery?.length > 0 && (
-                    <div className="grid sm:grid-cols-2 gap-3 mb-4">
+                    <div className="grid grid-cols-1 gap-4 mb-4">
                       {selectedProject.gallery.map((img: { src: string; caption?: string }, imgIndex: number) => (
                         <div key={imgIndex} className="rounded-xl overflow-hidden glass">
-                          <img src={img.src} alt={img.caption || selectedProject.title} className="w-full h-40 object-contain bg-black/20 p-2" />
+                          <img src={img.src} alt={img.caption || selectedProject.title} className="w-full h-72 md:h-96 object-contain bg-black/20 p-3" />
                           {img.caption && (
                             <p className="text-xs text-muted-foreground p-2">{img.caption}</p>
                           )}
