@@ -98,19 +98,32 @@ export const Projects = () => {
               <div className="glass rounded-3xl overflow-hidden card-hover h-full flex flex-col">
                 {/* Project Image/Visual */}
                 <div className="relative h-56 bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20 overflow-hidden">
-                  <div className="absolute inset-0 mesh-gradient opacity-50" />
-
-                  <motion.div
-                    animate={{
-                      scale: hoveredId === project.id ? 1.1 : 1,
-                    }}
-                    transition={{ duration: 0.6 }}
-                    className="absolute inset-0 flex items-center justify-center"
-                  >
-                    <div className="text-8xl font-display font-bold text-foreground/10">
-                      {String(project.id).padStart(2, '0')}
-                    </div>
-                  </motion.div>
+                  {project.image ? (
+                    <motion.img
+                      src={project.image}
+                      alt={project.title}
+                      animate={{
+                        scale: hoveredId === project.id ? 1.1 : 1,
+                      }}
+                      transition={{ duration: 0.6 }}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 mesh-gradient opacity-50" />
+                      <motion.div
+                        animate={{
+                          scale: hoveredId === project.id ? 1.1 : 1,
+                        }}
+                        transition={{ duration: 0.6 }}
+                        className="absolute inset-0 flex items-center justify-center"
+                      >
+                        <div className="text-8xl font-display font-bold text-foreground/10">
+                          {String(project.id).padStart(2, '0')}
+                        </div>
+                      </motion.div>
+                    </>
+                  )}
 
                   {/* Category Badge */}
                   <div className="absolute top-4 right-4 glass-strong px-4 py-2 rounded-full">

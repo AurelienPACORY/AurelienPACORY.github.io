@@ -8,6 +8,7 @@ interface ButtonProps {
   size?: 'default' | 'icon';
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+  'aria-label'?: string;
 }
 
 export const Button = ({
@@ -16,7 +17,8 @@ export const Button = ({
   variant = 'primary',
   size = 'default',
   className = '',
-  type = 'button'
+  type = 'button',
+  'aria-label': ariaLabel,
 }: ButtonProps) => {
   const variants = {
     primary: 'bg-gradient-to-r from-luxury-accent via-luxury-accent2 to-luxury-accent bg-[length:200%_100%] hover:bg-[length:100%_100%] text-primary-foreground glow-effect btn-magnetic',
@@ -33,6 +35,7 @@ export const Button = ({
     <motion.button
       type={type}
       onClick={onClick}
+      aria-label={ariaLabel}
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.05 }}

@@ -28,11 +28,11 @@
     "list": [
       {
         "id": 1,
-        "title": "Corporate Network Configuration",
-        "description": "Implementation of a complete network infrastructure with VLANs, inter-VLAN routing, and security.",
+        "title": "Secure Multi-Site Network Infrastructure",
+        "description": "Design of a secure multi-site network infrastructure simulating a production environment, with DMZ segmentation, encrypted VPN tunnels, and centralized monitoring via Centreon.",
         "category": "Networks",
-        "tags": ["Cisco", "VLANs", "Routing", "Security"],
-        "image": "./assets/project1.jpg",
+        "tags": ["Cisco ASA", "IPsec VPN", "DMZ", "RADIUS / WLC", "Centreon (SNMP)"],
+        "image": "./assets/project-infra-reseau-securisee.png",
         "github": "#",
         "demo": "#"
       },
@@ -42,7 +42,6 @@
         "description": "Deployment of a web server cluster with load balancing and redundancy.",
         "category": "Systems",
         "tags": ["Linux", "Nginx", "Docker", "HA"],
-        "image": "./assets/project2.jpg",
         "github": "#",
         "demo": "#"
       },
@@ -52,7 +51,6 @@
         "description": "Python application for real-time analysis and visualization of network traffic.",
         "category": "Development",
         "tags": ["Python", "Scapy", "Wireshark", "Data Viz"],
-        "image": "./assets/project3.jpg",
         "github": "#",
         "demo": "#"
       },
@@ -62,7 +60,6 @@
         "description": "Implementation of an IP telephony solution with Asterisk.",
         "category": "Networks",
         "tags": ["VoIP", "Asterisk", "SIP", "QoS"],
-        "image": "./assets/project4.jpg",
         "github": "#",
         "demo": "#"
       }

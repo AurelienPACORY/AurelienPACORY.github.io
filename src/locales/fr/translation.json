@@ -28,11 +28,11 @@
     "list": [
       {
         "id": 1,
-        "title": "Configuration Réseau Entreprise",
-        "description": "Mise en place d'une infrastructure réseau complète avec VLANs, routage inter-VLAN et sécurisation.",
+        "title": "Infrastructure Réseau Multi-Sites Sécurisée",
+        "description": "Conception d'une infrastructure réseau multi-sites simulant un environnement de production sécurisé, avec segmentation DMZ, VPN chiffrés et supervision centralisée via Centreon.",
         "category": "Réseaux",
-        "tags": ["Cisco", "VLANs", "Routage", "Sécurité"],
-        "image": "./assets/project1.jpg",
+        "tags": ["Cisco ASA", "VPN IPsec", "DMZ", "RADIUS / WLC", "Centreon (SNMP)"],
+        "image": "./assets/project-infra-reseau-securisee.png",
         "github": "#",
         "demo": "#"
       },
@@ -42,7 +42,6 @@
         "description": "Déploiement d'un cluster de serveurs web avec load balancing et redondance.",
         "category": "Systèmes",
         "tags": ["Linux", "Nginx", "Docker", "HA"],
-        "image": "./assets/project2.jpg",
         "github": "#",
         "demo": "#"
       },
@@ -52,7 +51,6 @@
         "description": "Application Python pour l'analyse et la visualisation du trafic réseau en temps réel.",
         "category": "Développement",
         "tags": ["Python", "Scapy", "Wireshark", "Data Viz"],
-        "image": "./assets/project3.jpg",
         "github": "#",
         "demo": "#"
       },
@@ -62,7 +60,6 @@
         "description": "Implémentation d'une solution de téléphonie IP avec Asterisk.",
         "category": "Réseaux",
         "tags": ["VoIP", "Asterisk", "SIP", "QoS"],
-        "image": "./assets/project4.jpg",
         "github": "#",
         "demo": "#"
       }
