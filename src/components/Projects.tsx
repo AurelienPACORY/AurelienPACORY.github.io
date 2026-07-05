@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, FolderGit2 } from 'lucide-react';
+import { ArrowRight, Download, FileText, FolderGit2 } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
@@ -249,7 +249,7 @@ export const Projects = () => {
               )}
 
               {selectedProject.skills_acquired?.length > 0 && (
-                <div>
+                <div className="mb-6">
                   <h4 className="text-sm font-semibold text-luxury-accent2 uppercase tracking-wide mb-3">
                     {t('projects.skills_acquired_title')}
                   </h4>
@@ -261,6 +261,49 @@ export const Projects = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+              )}
+
+              {(selectedProject.deliverables?.length > 0 || selectedProject.gallery?.length > 0 || selectedProject.pdf) && (
+                <div className="pt-6 border-t border-white/10">
+                  <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-3">
+                    {t('projects.deliverables_title')}
+                  </h4>
+
+                  {selectedProject.deliverables?.length > 0 && (
+                    <ul className="space-y-2 mb-4">
+                      {selectedProject.deliverables.map((item: string, itemIndex: number) => (
+                        <li key={itemIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <FileText className="w-4 h-4 text-luxury-accent shrink-0 mt-0.5" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {selectedProject.gallery?.length > 0 && (
+                    <div className="grid sm:grid-cols-2 gap-3 mb-4">
+                      {selectedProject.gallery.map((img: { src: string; caption?: string }, imgIndex: number) => (
+                        <div key={imgIndex} className="rounded-xl overflow-hidden glass">
+                          <img src={img.src} alt={img.caption || selectedProject.title} className="w-full h-40 object-cover" />
+                          {img.caption && (
+                            <p className="text-xs text-muted-foreground p-2">{img.caption}</p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {selectedProject.pdf && (
+                    <a
+                      href={selectedProject.pdf.url}
+                      download
+                      className="inline-flex items-center gap-2 text-sm font-medium text-luxury-accent hover:text-luxury-accent2 transition-colors"
+                    >
+                      <Download className="w-4 h-4" />
+                      {selectedProject.pdf.label}
+                    </a>
+                  )}
                 </div>
               )}
             </div>

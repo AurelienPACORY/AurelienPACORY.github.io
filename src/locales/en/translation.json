@@ -25,8 +25,10 @@
     "close": "Close",
     "skills_used_title": "Skills utilized",
     "skills_acquired_title": "Skills acquired",
+    "deliverables_title": "Deliverables & Evidence",
+    "download_pdf": "Download the report (PDF)",
     "projects_displayed": "project(s) displayed",
-    "categories": ["All", "Networks", "Systems", "Development"],
+    "categories": ["All", "Networks", "Systems", "Development", "Cybersecurity"],
     "list": [
       {
         "id": 1,
@@ -107,6 +109,46 @@
           "Managing network quality of service (QoS)",
           "Diagnosing VoIP flows"
         ]
+      },
+      {
+        "id": 5,
+        "title": "Responding to a Cyber-Attack",
+        "description": "Design of a complete corporate SOC (SIEM, CTI, SOAR) able to detect cyberattacks in real time and respond automatically on the firewall, with no human intervention.",
+        "long_description": "Full simulation of the three pillars of a corporate SOC (SIEM, CTI, and SOAR). Design of a virtualized infrastructure able to detect cyberattacks in real time and carry out automated remediation actions on the firewall, with no human intervention.",
+        "category": "Cybersecurity",
+        "tags": ["Wazuh (SIEM)", "MISP (CTI)", "n8n (SOAR)", "Docker", "Netfilter/iptables"],
+        "image": "./assets/project-cyber-architecture.png",
+        "skills_used": [
+          "Docker / Docker Compose",
+          "Debian 13",
+          "Wazuh SIEM",
+          "MISP CTI",
+          "n8n SOAR",
+          "Bash scripting",
+          "REST API integration (Webhooks, OAuth2)",
+          "Netfilter / iptables filtering"
+        ],
+        "skills_acquired": [
+          "Deploying and architecting a containerized SOC stack",
+          "Automating incident response (SOAR playbooks)",
+          "Managing and qualifying Threat Intelligence feeds (IoC Abuse.ch / ANSSI)",
+          "Technical curiosity, responsiveness, and analytical thinking"
+        ],
+        "deliverables": [
+          "n8n orchestration workflow",
+          "Wazuh integration script",
+          "Oral defense of the architecture"
+        ],
+        "gallery": [
+          {
+            "src": "./assets/project-cyber-workflow-n8n.png",
+            "caption": "SOAR orchestration workflow (n8n)"
+          }
+        ],
+        "pdf": {
+          "url": "./Reagir-Face-A-Une-Cyber-Attaque-DIC.pdf",
+          "label": "Download the report (PDF, French)"
+        }
       }
     ]
   },
