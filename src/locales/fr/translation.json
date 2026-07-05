@@ -21,8 +21,10 @@
     "main_title": "Mes Projets",
     "main_description": "Découvrez mes réalisations techniques et innovations",
     "filter_all": "Tous",
-    "code": "Code",
-    "demo": "Démo",
+    "view_details": "Voir les détails",
+    "close": "Fermer",
+    "skills_used_title": "Compétences mobilisées",
+    "skills_acquired_title": "Compétences acquises",
     "projects_displayed": "projet(s) affiché(s)",
     "categories": ["Tous", "Réseaux", "Systèmes", "Développement"],
     "list": [
@@ -30,38 +32,81 @@
         "id": 1,
         "title": "Infrastructure Réseau Multi-Sites Sécurisée",
         "description": "Conception d'une infrastructure réseau multi-sites simulant un environnement de production sécurisé, avec segmentation DMZ, VPN chiffrés et supervision centralisée via Centreon.",
+        "long_description": "Mise en œuvre d'une infrastructure réseau d'entreprise multi-sites simulant une architecture de production sécurisée. Déploiement d'un double rôle interconnecté : une SSII managée et son client PME, intégrant la segmentation de zones (DMZ), le routage inter-VLANs, l'interconnexion par tunnels chiffrés et la supervision centralisée.",
         "category": "Réseaux",
         "tags": ["Cisco ASA", "VPN IPsec", "DMZ", "RADIUS / WLC", "Centreon (SNMP)"],
         "image": "./assets/project-infra-reseau-securisee.png",
-        "github": "#",
-        "demo": "#"
+        "skills_used": [
+          "Administration routeurs & switches Cisco (CLI)",
+          "Pare-feu Cisco ASA 5506",
+          "Contrôleur WiFi (WLC)",
+          "VMs Linux Debian & Windows Server",
+          "Cisco Packet Tracer",
+          "Esprit d'équipe, organisation et gestion de projet"
+        ],
+        "skills_acquired": [
+          "Configuration de VPNs IPsec Site-to-Site et OpenVPN Client-to-Site",
+          "Sécurisation du Wi-Fi en WPA2-Entreprise (RADIUS / WLC local)",
+          "Mise en place d'un reverse proxy et de DMZ hiérarchisées",
+          "Supervision centralisée via Centreon (SNMP)"
+        ]
       },
       {
         "id": 2,
         "title": "Serveur Web Haute Disponibilité",
         "description": "Déploiement d'un cluster de serveurs web avec load balancing et redondance.",
+        "long_description": "Déploiement d'un cluster de serveurs web avec répartition de charge (load balancing) et redondance, afin de garantir la continuité du service en cas de panne d'un nœud.",
         "category": "Systèmes",
         "tags": ["Linux", "Nginx", "Docker", "HA"],
-        "github": "#",
-        "demo": "#"
+        "skills_used": [
+          "Administration Linux (Debian/Ubuntu)",
+          "Nginx",
+          "Docker",
+          "Scripting Bash"
+        ],
+        "skills_acquired": [
+          "Configuration d'un répartiteur de charge Nginx",
+          "Conteneurisation des services avec Docker",
+          "Tests de bascule (failover) et de tolérance aux pannes"
+        ]
       },
       {
         "id": 3,
         "title": "Analyseur de Trafic Réseau",
         "description": "Application Python pour l'analyse et la visualisation du trafic réseau en temps réel.",
+        "long_description": "Développement d'une application Python capable de capturer, analyser et visualiser en temps réel le trafic circulant sur une interface réseau, à des fins de diagnostic et de détection d'anomalies.",
         "category": "Développement",
         "tags": ["Python", "Scapy", "Wireshark", "Data Viz"],
-        "github": "#",
-        "demo": "#"
+        "skills_used": [
+          "Python",
+          "Scapy",
+          "Wireshark",
+          "Traitement et visualisation de données"
+        ],
+        "skills_acquired": [
+          "Capture et analyse de paquets réseau",
+          "Visualisation de données en temps réel",
+          "Détection de comportements réseau suspects"
+        ]
       },
       {
         "id": 4,
         "title": "Système VoIP",
         "description": "Implémentation d'une solution de téléphonie IP avec Asterisk.",
+        "long_description": "Mise en place d'une solution de téléphonie sur IP avec Asterisk, incluant la configuration des postes SIP, la gestion de la qualité de service (QoS) et les tests d'appels internes et externes.",
         "category": "Réseaux",
         "tags": ["VoIP", "Asterisk", "SIP", "QoS"],
-        "github": "#",
-        "demo": "#"
+        "skills_used": [
+          "Asterisk",
+          "Protocole SIP",
+          "Configuration QoS",
+          "Cisco Packet Tracer"
+        ],
+        "skills_acquired": [
+          "Configuration d'un serveur de téléphonie IP",
+          "Gestion de la qualité de service (QoS) sur le réseau",
+          "Diagnostic de flux VoIP"
+        ]
       }
     ]
   },

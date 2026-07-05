@@ -21,8 +21,10 @@
     "main_title": "My Projects",
     "main_description": "Discover my technical achievements and innovations",
     "filter_all": "All",
-    "code": "Code",
-    "demo": "Demo",
+    "view_details": "View details",
+    "close": "Close",
+    "skills_used_title": "Skills utilized",
+    "skills_acquired_title": "Skills acquired",
     "projects_displayed": "project(s) displayed",
     "categories": ["All", "Networks", "Systems", "Development"],
     "list": [
@@ -30,38 +32,81 @@
         "id": 1,
         "title": "Secure Multi-Site Network Infrastructure",
         "description": "Design of a secure multi-site network infrastructure simulating a production environment, with DMZ segmentation, encrypted VPN tunnels, and centralized monitoring via Centreon.",
+        "long_description": "Implementation of a multi-site corporate network infrastructure simulating a secure production architecture. Deployment of an interconnected dual role: a managed IT services provider and its SME client, integrating zone segmentation (DMZ), inter-VLAN routing, encrypted tunnel interconnection, and centralized monitoring.",
         "category": "Networks",
         "tags": ["Cisco ASA", "IPsec VPN", "DMZ", "RADIUS / WLC", "Centreon (SNMP)"],
         "image": "./assets/project-infra-reseau-securisee.png",
-        "github": "#",
-        "demo": "#"
+        "skills_used": [
+          "Cisco router & switch administration (CLI)",
+          "Cisco ASA 5506 firewall",
+          "WiFi controller (WLC)",
+          "Linux Debian & Windows Server VMs",
+          "Cisco Packet Tracer",
+          "Teamwork, organization and project management"
+        ],
+        "skills_acquired": [
+          "Configuring Site-to-Site IPsec and Client-to-Site OpenVPN tunnels",
+          "Securing Wi-Fi with WPA2-Enterprise (RADIUS / local WLC)",
+          "Setting up a reverse proxy and tiered DMZs",
+          "Centralized monitoring via Centreon (SNMP)"
+        ]
       },
       {
         "id": 2,
         "title": "High Availability Web Server",
         "description": "Deployment of a web server cluster with load balancing and redundancy.",
+        "long_description": "Deployment of a web server cluster with load balancing and redundancy, ensuring service continuity in case of a node failure.",
         "category": "Systems",
         "tags": ["Linux", "Nginx", "Docker", "HA"],
-        "github": "#",
-        "demo": "#"
+        "skills_used": [
+          "Linux administration (Debian/Ubuntu)",
+          "Nginx",
+          "Docker",
+          "Bash scripting"
+        ],
+        "skills_acquired": [
+          "Configuring an Nginx load balancer",
+          "Containerizing services with Docker",
+          "Failover and fault-tolerance testing"
+        ]
       },
       {
         "id": 3,
         "title": "Network Traffic Analyzer",
         "description": "Python application for real-time analysis and visualization of network traffic.",
+        "long_description": "Development of a Python application able to capture, analyze, and visualize network traffic on an interface in real time, for diagnostics and anomaly detection.",
         "category": "Development",
         "tags": ["Python", "Scapy", "Wireshark", "Data Viz"],
-        "github": "#",
-        "demo": "#"
+        "skills_used": [
+          "Python",
+          "Scapy",
+          "Wireshark",
+          "Data processing and visualization"
+        ],
+        "skills_acquired": [
+          "Capturing and parsing network packets",
+          "Real-time data visualization",
+          "Detecting suspicious network behavior"
+        ]
       },
       {
         "id": 4,
         "title": "VoIP System",
         "description": "Implementation of an IP telephony solution with Asterisk.",
+        "long_description": "Implementation of an IP telephony solution with Asterisk, including SIP endpoint configuration, quality of service (QoS) management, and internal/external call testing.",
         "category": "Networks",
         "tags": ["VoIP", "Asterisk", "SIP", "QoS"],
-        "github": "#",
-        "demo": "#"
+        "skills_used": [
+          "Asterisk",
+          "SIP protocol",
+          "QoS configuration",
+          "Cisco Packet Tracer"
+        ],
+        "skills_acquired": [
+          "Configuring an IP telephony server",
+          "Managing network quality of service (QoS)",
+          "Diagnosing VoIP flows"
+        ]
       }
     ]
   },

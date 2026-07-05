@@ -1,18 +1,20 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, FolderGit2, Github } from 'lucide-react';
+import { ArrowRight, FolderGit2 } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { Modal } from './ui/Modal';
 
 export const Projects = () => {
   const { ref } = useScrollAnimation({ triggerOnce: true });
   const { t } = useTranslation();
-  
+
   const categories = (t('projects.categories', { returnObjects: true }) || []) as Array<string>;
   const projectsData = (t('projects.list', { returnObjects: true }) || []) as Array<any>;
 
   const [filterIndex, setFilterIndex] = useState(0);
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const [selectedProject, setSelectedProject] = useState<any | null>(null);
 
   const filteredProjects = filterIndex === 0
     ? (Array.isArray(projectsData) ? projectsData : [])
@@ -95,7 +97,18 @@ export const Projects = () => {
               onHoverEnd={() => setHoveredId(null)}
               className="group"
             >
-              <div className="glass rounded-3xl overflow-hidden card-hover h-full flex flex-col">
+              <div
+                role="button"
+                tabIndex={0}
+                onClick={() => setSelectedProject(project)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setSelectedProject(project);
+                  }
+                }}
+                className="glass rounded-3xl overflow-hidden card-hover h-full flex flex-col cursor-pointer"
+              >
                 {/* Project Image/Visual */}
                 <div className="relative h-56 bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20 overflow-hidden">
                   {project.image ? (
@@ -155,24 +168,10 @@ export const Projects = () => {
                     ))}
                   </div>
 
-                  {/* Links */}
-                  <div className="flex gap-4">
-                    <motion.a
-                      href={project.github}
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      className="flex items-center gap-2 text-sm font-medium text-luxury-accent hover:text-luxury-accent2 transition-colors"
-                    >
-                      <Github className="w-4 h-4" />
-                      {t('projects.code')}
-                    </motion.a>
-                    <motion.a
-                      href={project.demo}
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      className="flex items-center gap-2 text-sm font-medium text-luxury-accent hover:text-luxury-accent2 transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      {t('projects.demo')}
-                    </motion.a>
+                  {/* View details hint */}
+                  <div className="flex items-center gap-2 text-sm font-medium text-luxury-accent group-hover:gap-3 transition-all">
+                    {t('projects.view_details')}
+                    <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
               </div>
@@ -180,6 +179,94 @@ export const Projects = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* Project Details Modal */}
+      <Modal
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+        closeLabel={t('projects.close')}
+      >
+        {selectedProject && (
+          <>
+            <div className="relative h-56 md:h-72 w-full overflow-hidden rounded-t-3xl bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20">
+              {selectedProject.image ? (
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              ) : (
+                <>
+                  <div className="absolute inset-0 mesh-gradient opacity-50" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-8xl font-display font-bold text-foreground/10">
+                      {String(selectedProject.id).padStart(2, '0')}
+                    </div>
+                  </div>
+                </>
+              )}
+              <div className="absolute top-4 left-4 glass-strong px-4 py-2 rounded-full">
+                <span className="text-xs font-semibold text-luxury-accent">
+                  {selectedProject.category}
+                </span>
+              </div>
+            </div>
+
+            <div className="p-8">
+              <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 gradient-text">
+                {selectedProject.title}
+              </h3>
+
+              <p className="text-muted-foreground mb-6">
+                {selectedProject.long_description || selectedProject.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-8">
+                {selectedProject.tags.map((tag: string, tagIndex: number) => (
+                  <span
+                    key={tagIndex}
+                    className="text-xs px-3 py-1 glass rounded-full text-muted-foreground"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {selectedProject.skills_used?.length > 0 && (
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-luxury-accent uppercase tracking-wide mb-3">
+                    {t('projects.skills_used_title')}
+                  </h4>
+                  <ul className="space-y-2">
+                    {selectedProject.skills_used.map((skill: string, skillIndex: number) => (
+                      <li key={skillIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-full bg-luxury-accent mt-2 shrink-0" />
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {selectedProject.skills_acquired?.length > 0 && (
+                <div>
+                  <h4 className="text-sm font-semibold text-luxury-accent2 uppercase tracking-wide mb-3">
+                    {t('projects.skills_acquired_title')}
+                  </h4>
+                  <ul className="space-y-2">
+                    {selectedProject.skills_acquired.map((skill: string, skillIndex: number) => (
+                      <li key={skillIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-full bg-luxury-accent2 mt-2 shrink-0" />
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </>
+        )}
+      </Modal>
     </section>
   );
 };
