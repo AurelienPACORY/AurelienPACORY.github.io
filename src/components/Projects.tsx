@@ -148,7 +148,7 @@ export const Projects = () => {
 
                 {/* Content */}
                 <div className="p-8 flex-1 flex flex-col">
-                  <h3 className="text-2xl font-display font-bold mb-3 group-hover:gradient-text transition-all">
+                  <h3 className="text-2xl font-display font-bold tracking-wide mb-3 group-hover:gradient-text transition-all">
                     {project.title}
                   </h3>
 
@@ -213,7 +213,7 @@ export const Projects = () => {
             </div>
 
             <div className="p-8">
-              <h3 className="text-2xl md:text-3xl font-display font-bold mb-4 gradient-text">
+              <h3 className="text-2xl md:text-3xl font-display font-bold tracking-wide mb-4 gradient-text">
                 {selectedProject.title}
               </h3>
 

@@ -28,7 +28,7 @@
     "deliverables_title": "Traces & Livrables",
     "download_pdf": "Télécharger le DIC (PDF)",
     "projects_displayed": "projet(s) affiché(s)",
-    "categories": ["Tous", "Réseaux", "Systèmes", "Développement", "Cybersécurité"],
+    "categories": ["Tous", "Réseaux", "Cybersécurité"],
     "list": [
       {
         "id": 1,
@@ -55,63 +55,6 @@
       },
       {
         "id": 2,
-        "title": "Serveur Web Haute Disponibilité",
-        "description": "Déploiement d'un cluster de serveurs web avec load balancing et redondance.",
-        "long_description": "Déploiement d'un cluster de serveurs web avec répartition de charge (load balancing) et redondance, afin de garantir la continuité du service en cas de panne d'un nœud.",
-        "category": "Systèmes",
-        "tags": ["Linux", "Nginx", "Docker", "HA"],
-        "skills_used": [
-          "Administration Linux (Debian/Ubuntu)",
-          "Nginx",
-          "Docker",
-          "Scripting Bash"
-        ],
-        "skills_acquired": [
-          "Configuration d'un répartiteur de charge Nginx",
-          "Conteneurisation des services avec Docker",
-          "Tests de bascule (failover) et de tolérance aux pannes"
-        ]
-      },
-      {
-        "id": 3,
-        "title": "Analyseur de Trafic Réseau",
-        "description": "Application Python pour l'analyse et la visualisation du trafic réseau en temps réel.",
-        "long_description": "Développement d'une application Python capable de capturer, analyser et visualiser en temps réel le trafic circulant sur une interface réseau, à des fins de diagnostic et de détection d'anomalies.",
-        "category": "Développement",
-        "tags": ["Python", "Scapy", "Wireshark", "Data Viz"],
-        "skills_used": [
-          "Python",
-          "Scapy",
-          "Wireshark",
-          "Traitement et visualisation de données"
-        ],
-        "skills_acquired": [
-          "Capture et analyse de paquets réseau",
-          "Visualisation de données en temps réel",
-          "Détection de comportements réseau suspects"
-        ]
-      },
-      {
-        "id": 4,
-        "title": "Système VoIP",
-        "description": "Implémentation d'une solution de téléphonie IP avec Asterisk.",
-        "long_description": "Mise en place d'une solution de téléphonie sur IP avec Asterisk, incluant la configuration des postes SIP, la gestion de la qualité de service (QoS) et les tests d'appels internes et externes.",
-        "category": "Réseaux",
-        "tags": ["VoIP", "Asterisk", "SIP", "QoS"],
-        "skills_used": [
-          "Asterisk",
-          "Protocole SIP",
-          "Configuration QoS",
-          "Cisco Packet Tracer"
-        ],
-        "skills_acquired": [
-          "Configuration d'un serveur de téléphonie IP",
-          "Gestion de la qualité de service (QoS) sur le réseau",
-          "Diagnostic de flux VoIP"
-        ]
-      },
-      {
-        "id": 5,
         "title": "Réagir Face à une Cyber-Attaque",
         "description": "Conception d'un SOC d'entreprise complet (SIEM, CTI, SOAR) capable de détecter des cyberattaques en temps réel et d'y répondre automatiquement, sans intervention humaine.",
         "long_description": "Simulation complète des trois pôles d'un SOC d'entreprise (SIEM, CTI et SOAR). Conception d'une infrastructure virtualisée capable de détecter des cyberattaques en temps réel et de mener des actions de remédiation automatisées sur le pare-feu, sans intervention humaine.",
