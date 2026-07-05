@@ -28,7 +28,7 @@
     "deliverables_title": "Deliverables & Evidence",
     "download_pdf": "Download the report (PDF)",
     "projects_displayed": "project(s) displayed",
-    "categories": ["All", "Networks", "Cybersecurity"],
+    "categories": ["All", "Networks", "Cybersecurity", "Company"],
     "list": [
       {
         "id": 1,
@@ -92,6 +92,13 @@
           "url": "./Reagir-Face-A-Une-Cyber-Attaque-DIC.pdf",
           "label": "Download the report (PDF, French)"
         }
+      },
+      {
+        "id": 3,
+        "title": "Threat Landscape Report (EDM)",
+        "description": "Company project — description coming soon.",
+        "category": "Company",
+        "tags": []
       }
     ]
   },

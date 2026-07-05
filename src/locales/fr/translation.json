@@ -28,7 +28,7 @@
     "deliverables_title": "Traces & Livrables",
     "download_pdf": "Télécharger le DIC (PDF)",
     "projects_displayed": "projet(s) affiché(s)",
-    "categories": ["Tous", "Réseaux", "Cybersécurité"],
+    "categories": ["Tous", "Réseaux", "Cybersécurité", "Entreprise"],
     "list": [
       {
         "id": 1,
@@ -92,6 +92,13 @@
           "url": "./Reagir-Face-A-Une-Cyber-Attaque-DIC.pdf",
           "label": "Télécharger le DIC (PDF)"
         }
+      },
+      {
+        "id": 3,
+        "title": "État de la Menace (EDM)",
+        "description": "Projet réalisé en entreprise — description à compléter.",
+        "category": "Entreprise",
+        "tags": []
       }
     ]
   },
