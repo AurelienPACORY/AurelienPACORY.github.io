@@ -188,7 +188,7 @@ export const Projects = () => {
       >
         {selectedProject && (
           <>
-            <div className="relative h-64 md:h-[28rem] w-full overflow-hidden rounded-t-3xl bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20">
+            <div className="relative h-72 md:h-[34rem] w-full overflow-hidden rounded-t-3xl bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20">
               {selectedProject.image ? (
                 <img
                   src={selectedProject.image}
