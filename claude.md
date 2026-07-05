@@ -2,224 +2,101 @@
 
 ## Vue d'ensemble
 
-Portfolio moderne et interactif pour Aurélien Pacory, étudiant en cybersécurité.
-
-## Objectifs
-
-Créer un portfolio universitaire professionnel avec :
-- Design moderne et tech
-- Animations fluides et captivantes
-- Navigation intuitive
-- Responsive design
+Portfolio d'Aurélien Pacory, étudiant en cybersécurité (BUT Réseaux & Télécommunications, alternance CTI chez Sopra Steria). Site en production sur GitHub Pages : https://aurelienpacory.github.io/
 
 ## Stack Technologique
 
-### Frontend
-- **React 18** - Framework UI moderne
-- **Vite** - Build tool ultra-rapide
-- **TypeScript** - Typage statique pour plus de robustesse
-- **Tailwind CSS** - Framework CSS utilitaire
-- **Framer Motion** - Animations fluides et performantes
-- **React Router** - Navigation SPA
-- **Lucide React** - Icônes modernes
+- **React 18** + **TypeScript** + **Vite**
+- **Tailwind CSS** (thème custom "luxury" glassmorphism, voir `tailwind.config.js`)
+- **Framer Motion** pour les animations et transitions
+- **react-i18next** pour l'internationalisation FR/EN (`src/locales/fr` et `src/locales/en`)
+- **Lucide React** pour les icônes
+- **@tsparticles** pour le fond animé (particules)
+- **next-themes** pour le mode clair/sombre
+- **EmailJS** + **react-google-recaptcha** pour le formulaire de contact
 
-## Structure du Site
-
-### 1. Page d'accueil / Hero Section
-- Animation d'entrée spectaculaire
-- Nom et titre avec effet de typing
-- Particules animées en arrière-plan
-- Call-to-action vers les sections principales
-
-### 2. Navigation
-- Menu sticky avec effet glassmorphism
-- Navigation smooth scroll
-- Indicateur de section active
-- Menu burger responsive pour mobile
-
-### 3. Section CV
-- Timeline interactive de parcours académique
-- Compétences techniques avec barres de progression animées
-- Langues
-- Centres d'intérêt
-- Téléchargement CV en PDF
-
-### 4. Section Projets
-- Grille de projets avec hover effects
-- Filtrage par catégorie (Réseaux, Développement, Systèmes)
-- Modal pour détails de chaque projet
-- Tags de technologies utilisées
-- Liens GitHub/démos
-
-### 5. Section Contact
-- Formulaire de contact animé
-- Validation en temps réel
-- Réseaux sociaux avec icônes animées
-- Email, LinkedIn, GitHub
-- Animation de confirmation d'envoi
-
-## Design System
-
-### Palette de couleurs (Tech Theme)
-- **Primary**: Bleu électrique (#0EA5E9, #06B6D4)
-- **Secondary**: Violet/Purple (#8B5CF6, #A855F7)
-- **Accent**: Cyan (#22D3EE)
-- **Background**: Noir profond (#0A0A0A, #111111)
-- **Surface**: Gris foncé (#1A1A1A, #1F1F1F)
-- **Text**: Blanc (#FFFFFF) et gris clair (#E5E5E5)
-
-### Typographie
-- **Headings**: Inter ou Space Grotesk (moderne, géométrique)
-- **Body**: Inter (lisibilité optimale)
-- **Code/Tech**: JetBrains Mono ou Fira Code
-
-### Animations
-
-#### Micro-interactions
-- Hover effects sur tous les éléments cliquables
-- Transitions fluides entre sections
-- Parallax scrolling subtil
-- Particles background animées
-- Glitch effects sur le titre
-- Gradient animé sur les boutons
-
-#### Animations de scroll
-- Fade in elements
-- Slide in from sides
-- Scale animations
-- Stagger children animations
-
-#### Effects spéciaux
-- Glassmorphism sur la navigation
-- Gradient mesh backgrounds
-- Glow effects sur les cartes
-- Ripple effect sur les boutons
-- Loading skeleton screens
-
-## Fonctionnalités
-
-### Core Features
-- ✅ Navigation fluide entre sections
-- ✅ Design responsive (Mobile, Tablet, Desktop)
-- ✅ Mode sombre (par défaut)
-- ✅ Animations performantes
-- ✅ SEO optimisé
-- ✅ Performance optimisée (Lighthouse score >90)
-
-### Nice to Have
-- Particles.js ou similaire pour background
-- Cursor personnalisé avec effet de trainée
-- Préloader animé
-- Easter eggs interactifs
-- Formulaire de contact fonctionnel (EmailJS)
-
-## Structure des Fichiers
+## Structure réelle des fichiers
 
 ```
-portefolio_aurelien/
-├── src/
-│   ├── components/
-│   │   ├── Navigation.tsx
-│   │   ├── Hero.tsx
-│   │   ├── CV.tsx
-│   │   ├── Projects.tsx
-│   │   ├── Contact.tsx
-│   │   ├── Footer.tsx
-│   │   └── ui/
-│   │       ├── Button.tsx
-│   │       ├── Card.tsx
-│   │       └── Modal.tsx
-│   ├── hooks/
-│   │   └── useScrollAnimation.ts
-│   ├── utils/
-│   │   └── constants.ts
-│   ├── styles/
-│   │   └── globals.css
-│   ├── App.tsx
-│   └── main.tsx
-├── public/
-│   └── assets/
-├── index.html
-├── package.json
-├── tsconfig.json
-├── tailwind.config.js
-├── vite.config.ts
-└── README.md
+src/
+├── App.tsx                    # Ordre des sections : Navigation, About, CV, Projects, Experiences, Contact, Footer
+├── components/
+│   ├── Navigation.tsx         # Nav sticky glassmorphism, i18n + theme switcher
+│   ├── About.tsx              # Section "À propos" : intro + réseaux sociaux + "Mes Domaines d'Expertise" (3 cartes)
+│   ├── CV.tsx                 # Timeline formation, compétences, langues, passions, téléchargement CV PDF
+│   ├── Projects.tsx           # Grille filtrable par catégorie + modale de détails par projet
+│   ├── Experiences.tsx        # Expériences professionnelles / alternance
+│   ├── Contact.tsx            # Formulaire de contact (EmailJS + reCAPTCHA)
+│   ├── Footer.tsx
+│   ├── ThemeProvider.tsx
+│   └── ui/
+│       ├── Button.tsx         # Accepte aria-label (le transmet bien au <button> HTML)
+│       ├── Card.tsx
+│       ├── Modal.tsx          # Modale générique réutilisable (Projects.tsx l'utilise)
+│       ├── LanguageSwitcher.tsx
+│       ├── ThemeSwitcher.tsx
+│       └── ParticlesBackground.tsx
+├── hooks/
+│   ├── useScrollAnimation.ts
+│   └── useActiveSection.ts
+├── locales/
+│   ├── fr/translation.json    # Source de vérité pour tout le contenu texte (FR)
+│   └── en/translation.json    # Équivalent EN (garder les deux synchronisés à chaque changement de contenu)
+└── styles/globals.css
 ```
 
-## Installation et Lancement
+**Il n'y a pas de section Hero** : elle a été supprimée. La page "À propos" (`About.tsx`) fait office d'ouverture du site.
 
-### Prérequis
-- Node.js >= 18
-- npm ou yarn
+## Design System (réel, pas le thème "tech" bleu/cyan d'origine)
 
-### Commandes
+- **Thème "luxury"** : dégradés violet/rose (`luxury-accent` `#6366f1`, `luxury-accent2` `#ec4899`, `luxury-accent3` `#f59e0b`), fond très sombre.
+- **Glassmorphism** : classes utilitaires `.glass` / `.glass-strong` (fond flouté semi-transparent) utilisées partout (cartes, nav, badges).
+- **Typo headings** : `font-display` (police "Clash Display" configurée mais jamais chargée sur le site → fallback système). Un `letter-spacing: -0.02em` global sur h1-h6 (`globals.css`) peut rendre certains titres trop resserrés ; ajouter `tracking-wide` au cas par cas si besoin (déjà fait sur les titres de projet).
+- **Fond animé** : `ParticlesBackground.tsx` (tsparticles) + `mesh-gradient` en overlay sur les sections.
+
+## Système de projets (`Projects.tsx` + `locales/*/translation.json` → clé `projects`)
+
+Chaque entrée de `projects.list` peut avoir :
+- `title`, `description` (courte, carte), `long_description` (optionnelle, modale — sinon fallback sur `description`)
+- `category` (doit correspondre à une valeur de `projects.categories`)
+- `tags` (chips affichées sur la carte et en haut de la modale)
+- `image` (optionnelle ; chemin `./assets/...` vers `public/assets/`). **Toujours cropper l'image source pour ne garder que le contenu utile** (pas de marges blanches/éléments hors-cadre) : les images s'affichent en `object-contain` (jamais recadrées par CSS), donc une image mal cadrée à la source reste mal cadrée à l'écran.
+- `skills_used` / `skills_acquired` (listes optionnelles → sections "Compétences mobilisées" / "Compétences acquises" dans la modale)
+- `deliverables` (liste optionnelle → section "Traces & Livrables")
+- `gallery` (liste optionnelle d'images secondaires `{ src, caption }`, ex. schéma additionnel)
+- `pdf` (optionnel, `{ url, label }` → lien de téléchargement, ex. rapport de projet)
+
+Sans image ni catégorie correspondante, une carte retombe sur un fallback numéroté (dégradé + `01`/`02`...).
+
+### État actuel des projets (2026)
+1. **Infrastructure Réseau Multi-Sites Sécurisée** — projet réseau réel (Cisco, VPN IPsec, DMZ, Centreon), complet avec image + compétences.
+2. **Réagir Face à une Cyber-Attaque** — projet SOC réel (Wazuh/MISP/n8n), complet avec image, galerie (workflow n8n), et DIC en PDF téléchargeable.
+3. **État de la Menace (EDM)** — projet entreprise (catégorie "Entreprise"), **placeholder en attente de contenu** (description, image, compétences à venir — le sujet en a discuté avec Claude et reviendra compléter).
+
+Les anciens projets fictifs (Serveur Web HA, Analyseur de Trafic, VoIP) ont été supprimés — ne pas les réintroduire.
+
+## Déploiement
+
+Le site est servi par **GitHub Pages depuis la branche `gh-pages`** (pas via GitHub Actions).
 
 ```bash
-# Installation des dépendances
-npm install
-
-# Lancement en développement
-npm run dev
-
-# Build pour production
-npm run build
-
-# Preview du build
-npm run preview
+npm run build      # build Vite → dist/
+npm run deploy     # gh-pages -d dist --dotfiles → publie dist/ sur la branche gh-pages
 ```
 
-## Sections à Remplir Plus Tard
+**Important** : le flag `--dotfiles` est indispensable. Le paquet `gh-pages` exclut les fichiers commençant par un point par défaut, donc sans ce flag, `.nojekyll` (présent dans `public/`) n'est jamais publié → GitHub Pages tente de builder le site avec Jekyll → échec de build. Ce bug a déjà été rencontré et corrigé (commit `e2237b8`) ; ne jamais retirer ce flag.
 
-### CV
-- [ ] Formation détaillée
-- [ ] Expériences professionnelles/stages
-- [ ] Compétences techniques détaillées
-- [ ] Certifications
+Après un déploiement, le CDN de GitHub Pages peut mettre plusieurs minutes à se rafraîchir (`Cache-Control: max-age=600`). Pour vérifier qu'un déploiement a bien pris sans attendre le cache CDN, comparer le hash du bundle JS référencé par `https://raw.githubusercontent.com/AurelienPACORY/AurelienPACORY.github.io/gh-pages/index.html` avec celui du dernier build local.
 
-### Projets
-- [ ] Projets réseaux (configuration routeurs, VLANs, etc.)
-- [ ] Projets développement
-- [ ] Projets systèmes
-- [ ] Descriptions et screenshots
+Workflow habituel après une session de modifications : `git push origin main` (sauvegarde du code source) puis `npm run deploy` (publication du site).
 
-### Contact
-- [ ] Email professionnel
-- [ ] LinkedIn
-- [ ] GitHub
-- [ ] Autres réseaux sociaux
+## Prochaines étapes connues
 
-## Optimisations Futures
-
-- [ ] Ajouter un blog technique
-- [ ] Système de thème clair/sombre toggle
-- [ ] Internationalisation (FR/EN)
-- [ ] Analytics (Google Analytics ou Plausible)
-- [ ] PWA support
-- [ ] Formulaire de contact avec backend
-
-## Notes Techniques
-
-### Performance
-- Lazy loading des images
-- Code splitting par route
-- Optimisation des animations (GPU acceleration)
-- Compression des assets
-
-### Accessibilité
-- Navigation au clavier
-- ARIA labels
-- Contraste suffisant
-- Focus visible
-
-### SEO
-- Meta tags appropriées
-- Open Graph pour partage social
-- Sitemap
-- Structured data
+- Compléter le projet "État de la Menace (EDM)" (catégorie Entreprise) : description, image, compétences mobilisées/acquises, éventuels livrables.
+- `README.md` décrit encore un ancien design "brutalist" (noir/blanc/vert) qui ne correspond plus au thème réel du site — à corriger si quelqu'un s'y réfère un jour.
 
 ---
 
-**Développé pour**: Aurélien Pacory
-**BUT**: Réseaux et Télécommunications
-**Année**: 2026
+**Développé pour** : Aurélien Pacory
+**BUT** : Réseaux et Télécommunications
+**Année** : 2026
