@@ -119,7 +119,7 @@ export const Projects = () => {
                         scale: hoveredId === project.id ? 1.1 : 1,
                       }}
                       transition={{ duration: 0.6 }}
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-contain p-3"
                     />
                   ) : (
                     <>
@@ -188,7 +188,7 @@ export const Projects = () => {
       >
         {selectedProject && (
           <>
-            <div className="relative h-72 md:h-[34rem] w-full overflow-hidden rounded-t-3xl bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20">
+            <div className="relative h-56 md:h-96 w-full overflow-hidden rounded-t-3xl bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20">
               {selectedProject.image ? (
                 <img
                   src={selectedProject.image}
