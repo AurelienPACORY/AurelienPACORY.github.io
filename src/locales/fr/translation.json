@@ -14,7 +14,25 @@
     "main_title": "Aurélien Pacory",
     "role_title": "Étudiant en cybersécurité",
     "view_projects": "Voir mes projets",
-    "description": "Actuellement étudiant en cybersécurité, je me passionne pour l’univers de l’informatique, et plus particulièrement pour la protection des réseaux et des systèmes. Curieux de nature et toujours en quête de nouveaux défis, j’ai choisi d’orienter mon parcours vers ce domaine en constante évolution.<br/><br/>C’est au fil de mes études que la cybersécurité s’est imposée comme une évidence : dans un monde toujours plus connecté, garantir la protection des systèmes et des données est devenu un enjeu majeur. Je souhaite contribuer à cette mission en concevant des solutions toujours plus sûres, efficaces et adaptées aux menaces actuelles.<br/><br/>J’aime apprendre, expérimenter et créer, que ce soit à travers des projets personnels ou en entreprise, et je prends plaisir à mettre mes compétences en pratique pour progresser continuellement.<br/><br/>Si vous souhaitez en savoir plus sur moi ou échanger, n’hésitez pas à explorer ce site… ou à <a href='#download-cv-button' class='underline text-luxury-accent hover:text-luxury-accent2 transition-colors'>télécharger mon CV</a> !"
+    "description": "Actuellement étudiant en cybersécurité, je me passionne pour l’univers de l’informatique, et plus particulièrement pour la protection des réseaux et des systèmes. Curieux de nature et toujours en quête de nouveaux défis, j’ai choisi d’orienter mon parcours vers ce domaine en constante évolution.<br/><br/>C’est au fil de mes études que la cybersécurité s’est imposée comme une évidence : dans un monde toujours plus connecté, garantir la protection des systèmes et des données est devenu un enjeu majeur. Je souhaite contribuer à cette mission en concevant des solutions toujours plus sûres, efficaces et adaptées aux menaces actuelles.<br/><br/>J’aime apprendre, expérimenter et créer, que ce soit à travers des projets personnels ou en entreprise, et je prends plaisir à mettre mes compétences en pratique pour progresser continuellement.<br/><br/>Si vous souhaitez en savoir plus sur moi ou échanger, n’hésitez pas à explorer ce site… ou à <a href='#download-cv-button' class='underline text-luxury-accent hover:text-luxury-accent2 transition-colors'>télécharger mon CV</a> !",
+    "expertise_title": "Mes Domaines d'Expertise",
+    "expertise": [
+      {
+        "icon": "Network",
+        "title": "Réseaux & Infrastructures",
+        "description": "Conception et sécurisation d'architectures réseau d'entreprise : segmentation VLAN/DMZ, VPN IPsec, pare-feu Cisco ASA et supervision centralisée (Centreon)."
+      },
+      {
+        "icon": "ShieldAlert",
+        "title": "Sécurité Défensive & SOC",
+        "description": "Déploiement de stacks SOC conteneurisées (SIEM Wazuh, SOAR n8n) et automatisation de la détection et de la réponse aux incidents en temps réel."
+      },
+      {
+        "icon": "Radar",
+        "title": "Cyber Threat Intelligence",
+        "description": "Analyse et contextualisation de la menace (TTPs, IOCs) via la matrice MITRE ATT&CK et la plateforme OpenCTI, dans le cadre de mon alternance chez Sopra Steria."
+      }
+    ]
   },
   "projects": {
     "section_title": "Réalisations",

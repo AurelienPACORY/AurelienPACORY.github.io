@@ -1,13 +1,21 @@
 import { motion } from 'framer-motion';
-import { Sparkles, Github, Linkedin, Mail } from 'lucide-react';
+import { Sparkles, Github, Linkedin, Mail, Network, ShieldAlert, Radar, LucideIcon } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { Button } from './ui/Button';
 import { CONTACT_INFO } from '../utils/constants';
 
+const EXPERTISE_ICONS: Record<string, LucideIcon> = { Network, ShieldAlert, Radar };
+
 export const About = () => {
   const { ref } = useScrollAnimation({ triggerOnce: true });
   const { t } = useTranslation();
+
+  const expertise = (t('about.expertise', { returnObjects: true }) || []) as Array<{
+    icon: string;
+    title: string;
+    description: string;
+  }>;
 
   return (
     <section id="about" ref={ref} className="py-32 relative overflow-hidden">
@@ -102,6 +110,47 @@ export const About = () => {
             </motion.a>
           ))}
         </motion.div>
+
+        {/* Expertise */}
+        {expertise.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="mt-16"
+          >
+            <h3 className="text-2xl md:text-3xl font-display font-bold tracking-wide text-center mb-10 gradient-text">
+              {t('about.expertise_title')}
+            </h3>
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {expertise.map((item, index) => {
+                const Icon = EXPERTISE_ICONS[item.icon] ?? Sparkles;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="glass rounded-3xl p-6 card-hover"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-luxury-accent/20 to-luxury-accent2/20 flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-luxury-accent" />
+                    </div>
+                    <h4 className="text-lg font-display font-bold tracking-wide mb-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        )}
       </div>
     </section>
   );
