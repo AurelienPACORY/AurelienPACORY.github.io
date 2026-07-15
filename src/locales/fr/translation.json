@@ -46,7 +46,12 @@
     "deliverables_title": "Traces & Livrables",
     "download_pdf": "Télécharger le DIC (PDF)",
     "projects_displayed": "projet(s) affiché(s)",
-    "categories": ["Tous", "Réseaux", "Cybersécurité", "Entreprise"],
+    "categories": [
+      "Tous",
+      "Réseaux",
+      "Cybersécurité",
+      "Entreprise"
+    ],
     "list": [
       {
         "id": 1,
@@ -54,7 +59,13 @@
         "description": "Conception d'une infrastructure réseau multi-sites simulant un environnement de production sécurisé, avec segmentation DMZ, VPN chiffrés et supervision centralisée via Centreon.",
         "long_description": "Mise en œuvre d'une infrastructure réseau d'entreprise multi-sites simulant une architecture de production sécurisée. Déploiement d'un double rôle interconnecté : une SSII managée et son client PME, intégrant la segmentation de zones (DMZ), le routage inter-VLANs, l'interconnexion par tunnels chiffrés et la supervision centralisée.",
         "category": "Réseaux",
-        "tags": ["Cisco ASA", "VPN IPsec", "DMZ", "RADIUS / WLC", "Centreon (SNMP)"],
+        "tags": [
+          "Cisco ASA",
+          "VPN IPsec",
+          "DMZ",
+          "RADIUS / WLC",
+          "Centreon (SNMP)"
+        ],
         "image": "./assets/project-infra-reseau-securisee.png",
         "skills_used": [
           "Administration routeurs & switches Cisco (CLI)",
@@ -77,7 +88,13 @@
         "description": "Conception d'un SOC d'entreprise complet (SIEM, CTI, SOAR) capable de détecter des cyberattaques en temps réel et d'y répondre automatiquement, sans intervention humaine.",
         "long_description": "Simulation complète des trois pôles d'un SOC d'entreprise (SIEM, CTI et SOAR). Conception d'une infrastructure virtualisée capable de détecter des cyberattaques en temps réel et de mener des actions de remédiation automatisées sur le pare-feu, sans intervention humaine.",
         "category": "Cybersécurité",
-        "tags": ["Wazuh (SIEM)", "MISP (CTI)", "n8n (SOAR)", "Docker", "Netfilter/iptables"],
+        "tags": [
+          "Wazuh (SIEM)",
+          "MISP (CTI)",
+          "n8n (SOAR)",
+          "Docker",
+          "Netfilter/iptables"
+        ],
         "image": "./assets/project-cyber-architecture.png",
         "skills_used": [
           "Docker / Docker Compose",
@@ -114,9 +131,32 @@
       {
         "id": 3,
         "title": "État de la Menace (EDM)",
-        "description": "Projet réalisé en entreprise — description à compléter.",
+        "description": "Production d'un renseignement sur la menace Kali365, une plateforme de Phishing-as-a-Service ciblant Microsoft 365, dans le cadre de mon alternance en équipe Cyber Threat Intelligence (CTI) chez Sopra Steria.",
+        "long_description": "Réalisation d'un État de la Menace (EDM) au sein de l'équipe Cyber Threat Intelligence (CTI) de Sopra Steria : une production de renseignement portant sur une menace cyber actuelle, destinée à fournir aux équipes SOC une base exploitable pour du Threat Hunting.\n\nSujet retenu : Kali365, une plateforme de Phishing-as-a-Service (PhaaS) ciblant les environnements Microsoft 365, ayant fait l'objet d'une alerte du FBI/IC3 en mai 2026. La menace repose sur l'abus du flux d'authentification OAuth 2.0 Device Authorization Grant (Device Code Flow) : la victime valide, sur une page Microsoft légitime, un code généré par l'attaquant, qui obtient ainsi des jetons d'accès OAuth sans avoir besoin du mot de passe ni d'un nouveau challenge MFA.\n\nLe travail a couvert l'ensemble de la démarche CTI : collecte et croisement de sources (FBI/IC3, Arctic Wolf, Palo Alto Unit 42, ANY.RUN, Guardz, Todyl), analyse technique de la chaîne d'attaque (phishing initial, collecte via Microsoft Graph, persistance par jetons, évasion via règles de messagerie), cartographie MITRE ATT&CK (T1566 Phishing, T1078 Valid Accounts, T1114 Email Collection, T1534 Internal Spearphishing), extraction d'IOC et formulation d'hypothèses de détection (anomalies sur le Device Code Flow, incohérences géographiques/ASN, Impossible Travel, accès massifs à la messagerie), avant capitalisation dans OpenCTI.\n\nRestitution sous forme de note de synthèse et de support de présentation, avec adaptation du niveau de technicité selon le public visé (analystes techniques ou non-techniques).",
         "category": "Entreprise",
-        "tags": []
+        "tags": [
+          "CTI",
+          "Threat Intelligence",
+          "MITRE ATT&CK",
+          "OpenCTI",
+          "OAuth 2.0",
+          "Microsoft 365"
+        ],
+        "skills_used": [
+          "Threat Intelligence (CTI)",
+          "OSINT",
+          "MITRE ATT&CK",
+          "OAuth 2.0 / sécurité cloud Microsoft 365",
+          "OpenCTI",
+          "Rédaction de rapports d'analyse"
+        ],
+        "skills_acquired": [
+          "Méthodologie de production d'un État de la Menace (EDM)",
+          "Formulation d'hypothèses de détection à partir de logs cloud (Entra ID)",
+          "Vulgarisation de concepts techniques complexes (OAuth, tokens, Device Code Flow)",
+          "Capitalisation du renseignement dans OpenCTI"
+        ],
+        "image": "./assets/image_edm.png"
       }
     ]
   },
@@ -129,21 +169,53 @@
     "soft_skills_title": "Savoir-être",
     "skills_title": "Compétences",
     "skills": {
-       "categories": {
-          "network": "Réseaux",
-          "system": "Systèmes",
-          "dev": "Développement"
-       },
-       "list": [
-          { "name": "Réseaux & Protocoles", "level": 85, "category": "network" },
-          { "name": "Cisco/Packet Tracer", "level": 80, "category": "network" },
-          { "name": "Linux/Unix", "level": 75, "category": "system" },
-          { "name": "Python", "level": 70, "category": "dev" },
-          { "name": "HTML/CSS/JS", "level": 85, "category": "dev" },
-          { "name": "Docker", "level": 65, "category": "system" },
-          { "name": "Sécurité Réseau", "level": 70, "category": "network" },
-          { "name": "VoIP/Téléphonie", "level": 60, "category": "network" }
-        ]
+      "categories": {
+        "network": "Réseaux",
+        "system": "Systèmes",
+        "dev": "Développement"
+      },
+      "list": [
+        {
+          "name": "Réseaux & Protocoles",
+          "level": 85,
+          "category": "network"
+        },
+        {
+          "name": "Cisco/Packet Tracer",
+          "level": 80,
+          "category": "network"
+        },
+        {
+          "name": "Linux/Unix",
+          "level": 75,
+          "category": "system"
+        },
+        {
+          "name": "Python",
+          "level": 70,
+          "category": "dev"
+        },
+        {
+          "name": "HTML/CSS/JS",
+          "level": 85,
+          "category": "dev"
+        },
+        {
+          "name": "Docker",
+          "level": 65,
+          "category": "system"
+        },
+        {
+          "name": "Sécurité Réseau",
+          "level": 70,
+          "category": "network"
+        },
+        {
+          "name": "VoIP/Téléphonie",
+          "level": 60,
+          "category": "network"
+        }
+      ]
     },
     "passions_title": "Passions",
     "download_cv": "Télécharger mon CV",
@@ -171,9 +243,21 @@
       }
     ],
     "languages": [
-      { "name": "Français", "level": "Langue maternelle", "flag": "🇫🇷" },
-      { "name": "Anglais", "level": "Niveau A2/B1", "flag": "🇬🇧" },
-      { "name": "Espagnol", "level": "Niveau A2", "flag": "🇪🇸" }
+      {
+        "name": "Français",
+        "level": "Langue maternelle",
+        "flag": "🇫🇷"
+      },
+      {
+        "name": "Anglais",
+        "level": "Niveau A2/B1",
+        "flag": "🇬🇧"
+      },
+      {
+        "name": "Espagnol",
+        "level": "Niveau A2",
+        "flag": "🇪🇸"
+      }
     ],
     "hobbies": [
       {
@@ -232,7 +316,12 @@
             "icon": "Shield"
           }
         ],
-        "skills": ["MITRE ATT&CK", "OpenCTI", "TTPs", "IOCs"]
+        "skills": [
+          "MITRE ATT&CK",
+          "OpenCTI",
+          "TTPs",
+          "IOCs"
+        ]
       },
       {
         "year": "2025",

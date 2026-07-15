@@ -217,9 +217,15 @@ export const Projects = () => {
                 {selectedProject.title}
               </h3>
 
-              <p className="text-muted-foreground mb-6">
-                {selectedProject.long_description || selectedProject.description}
-              </p>
+              <div className="space-y-4 mb-6">
+                {(selectedProject.long_description || selectedProject.description)
+                  .split('\n\n')
+                  .map((paragraph: string, paragraphIndex: number) => (
+                    <p key={paragraphIndex} className="text-muted-foreground leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+              </div>
 
               <div className="flex flex-wrap gap-2 mb-8">
                 {selectedProject.tags.map((tag: string, tagIndex: number) => (

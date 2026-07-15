@@ -71,7 +71,7 @@ Sans image ni catégorie correspondante, une carte retombe sur un fallback numé
 ### État actuel des projets (2026)
 1. **Infrastructure Réseau Multi-Sites Sécurisée** — projet réseau réel (Cisco, VPN IPsec, DMZ, Centreon), complet avec image + compétences.
 2. **Réagir Face à une Cyber-Attaque** — projet SOC réel (Wazuh/MISP/n8n), complet avec image, galerie (workflow n8n), et DIC en PDF téléchargeable.
-3. **État de la Menace (EDM)** — projet entreprise (catégorie "Entreprise"), **placeholder en attente de contenu** (description, image, compétences à venir — le sujet en a discuté avec Claude et reviendra compléter).
+3. **État de la Menace (EDM)** — projet entreprise (catégorie "Entreprise"), complet avec description, `long_description`, image (`image_edm.png`, illustration générique cyber/CTI) et compétences mobilisées/acquises (sujet : menace Kali365, PhaaS ciblant Microsoft 365, alternance CTI Sopra Steria). Contenu volontairement limité aux éléments publics (alertes FBI/IC3, rapports d'éditeurs, framework MITRE ATT&CK) — pas de galerie ni de PDF, car le rapport interne complet est confidentiel. Ne pas y ajouter de détails internes (règles de détection précises, échanges avec l'équipe de détection, outils/documents internes) sans validation explicite du sujet.
 
 Les anciens projets fictifs (Serveur Web HA, Analyseur de Trafic, VoIP) ont été supprimés — ne pas les réintroduire.
 
@@ -92,7 +92,6 @@ Workflow habituel après une session de modifications : `git push origin main` (
 
 ## Prochaines étapes connues
 
-- Compléter le projet "État de la Menace (EDM)" (catégorie Entreprise) : description, image, compétences mobilisées/acquises, éventuels livrables.
 - `README.md` décrit encore un ancien design "brutalist" (noir/blanc/vert) qui ne correspond plus au thème réel du site — à corriger si quelqu'un s'y réfère un jour.
 
 ---
