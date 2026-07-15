@@ -104,7 +104,7 @@ Le site est un SPA statique sans backend (pas de serveur, base de données, ou p
 
 ## Prochaines étapes connues
 
-- La balise `<meta name="description">` dans `index.html` décrit encore l'ancien design "brutalist" (`"[PORTFOLIO] Aurélien Pacory - Étudiant en cybersécurité | Brutalist Design"`) — à corriger pour refléter le thème "luxury" réel (le `README.md`, lui, a été corrigé le 2026-07-15).
+- Le `<title>` dans `index.html` est encore en majuscules façon ancien thème "brutalist" (`AURÉLIEN PACORY - PORTFOLIO`) — signalé à l'utilisateur le 2026-07-15, laissé tel quel car pas de demande explicite de correction. Le `README.md` et la `<meta name="description">`, eux, ont été corrigés ce jour-là pour refléter le thème "luxury" réel.
 
 ---
 
