@@ -104,7 +104,7 @@ Le site est un SPA statique sans backend (pas de serveur, base de données, ou p
 
 ## Prochaines étapes connues
 
-- `README.md` (et la balise `<meta name="description">` dans `index.html`) décrivent encore un ancien design "brutalist" (noir/blanc/vert) qui ne correspond plus au thème "luxury" réel du site — à corriger si quelqu'un s'y réfère un jour.
+- La balise `<meta name="description">` dans `index.html` décrit encore l'ancien design "brutalist" (`"[PORTFOLIO] Aurélien Pacory - Étudiant en cybersécurité | Brutalist Design"`) — à corriger pour refléter le thème "luxury" réel (le `README.md`, lui, a été corrigé le 2026-07-15).
 
 ---
 

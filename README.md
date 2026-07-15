@@ -1,143 +1,102 @@
-# [AP] PORTFOLIO - BRUTALIST DESIGN
+# Portfolio - Aurélien Pacory
 
-Portfolio brutalist ultra-moderne pour Aurélien Pacory, étudiant en cybersécurité.
+Portfolio d'Aurélien Pacory, étudiant en cybersécurité (BUT Réseaux & Télécommunications, alternance CTI chez Sopra Steria). En production sur GitHub Pages : https://aurelienpacory.github.io/
 
-## 🎨 DESIGN PHILOSOPHY
+## 🎨 Design
 
-**BRUTALIST/RAW** - Design agressif et minimaliste inspiré du mouvement brutaliste
+**Thème "luxury" glassmorphism** — dégradés violet/rose/ambre sur fond très sombre, cartes en verre dépoli.
 
-### Caractéristiques principales
+- **Palette d'accent** : Indigo `#6366f1`, Rose `#ec4899`, Ambre `#f59e0b` (dégradé "aurora")
+- **Glassmorphism** : classes utilitaires `.glass` / `.glass-strong` (fond flouté semi-transparent), utilisées sur les cartes, la nav et les badges
+- **Fond animé** : particules (`@tsparticles`) + overlay `mesh-gradient` sur les sections
+- **Typographie** : `Inter` (texte courant) + `Clash Display` configurée pour les titres (`font-display`), avec repli système si la police externe ne charge pas
+- **Animations** : Framer Motion — fade-in, slide-up, scale-in, effets de flottement et de lueur (`glow`, `float`, `aurora`)
+- **Mode clair/sombre** : géré via `next-themes`
 
-- **Typographie harsh**: IBM Plex Mono (headings) + Courier New (body)
-- **Palette monochrome**: Noir (#000000) + Blanc (#FFFFFF) + Acid Green (#00FF41)
-- **Borders épaisses**: 4px solid borders partout
-- **Grilles strictes**: Layout géométrique et asymétrique
-- **Animations brusques**: Pas d'easing, transitions linéaires
-- **Custom cursor**: Curseur personnalisé avec accent vert
-- **Hover states agressifs**: Effets de transformation instantanés
-- **Box shadows**: Ombres plates et décalées (brutal-box-shadow)
+## 🚀 Technologies
 
-## 🚀 TECHNOLOGIES
+- **React 18** + **TypeScript** + **Vite**
+- **Tailwind CSS** (thème custom, voir `tailwind.config.js`)
+- **Framer Motion** — animations et transitions
+- **react-i18next** — internationalisation FR/EN
+- **Lucide React** — icônes
+- **EmailJS** — formulaire de contact (protection anti-spam par honeypot)
 
-- **React 18** - Framework UI
-- **TypeScript** - Typage statique
-- **Vite** - Build tool ultra-rapide
-- **Tailwind CSS** - Framework CSS utilitaire (customisé)
-- **Lucide React** - Icônes minimalistes
-
-## 📦 INSTALLATION
+## 📦 Installation
 
 ```bash
 npm install
 ```
 
-## 🔧 DÉVELOPPEMENT
+## 🔧 Développement
 
 ```bash
 npm run dev
 ```
 
-Le site sera disponible sur `http://localhost:5173`
+Le site est alors disponible sur `http://localhost:5173` (ou le prochain port libre).
 
-## 🏗️ BUILD
+> ⚠️ Le formulaire de contact ne fonctionne qu'en production (`https://aurelienpacory.github.io`) : la clé publique EmailJS est restreinte à ce domaine dans le dashboard EmailJS. Un test d'envoi en local échouera, ce n'est pas un bug.
+
+## 🏗️ Build
 
 ```bash
 npm run build
 ```
 
-## 👀 PREVIEW
+## 👀 Preview
 
 ```bash
 npm run preview
 ```
 
-## 📁 STRUCTURE
+## 🌐 Déploiement
+
+Le site est servi par **GitHub Pages depuis la branche `gh-pages`** :
+
+```bash
+npm run deploy     # build + publie dist/ sur gh-pages (flag --dotfiles indispensable pour .nojekyll)
+```
+
+## 📁 Structure
 
 ```
 src/
+├── App.tsx                    # Navigation, About, CV, Projects, Experiences, Contact, Footer
 ├── components/
-│   ├── Navigation.tsx    # Nav sticky avec borders
-│   ├── Hero.tsx          # Section hero avec glitch effect
-│   ├── CV.tsx            # Timeline + Skills bars
-│   ├── Projects.tsx      # Grille asymétrique de projets
-│   ├── Contact.tsx       # Form brutal + social links
-│   ├── Footer.tsx        # Footer avec ASCII art
+│   ├── Navigation.tsx         # Nav sticky glassmorphism, i18n + theme switcher
+│   ├── About.tsx              # Ouverture du site : intro + réseaux sociaux + domaines d'expertise
+│   ├── CV.tsx                 # Timeline formation, compétences, langues, passions, CV PDF
+│   ├── Projects.tsx           # Grille filtrable par catégorie + modale de détails
+│   ├── Experiences.tsx        # Expériences professionnelles / alternance
+│   ├── Contact.tsx            # Formulaire de contact (EmailJS + honeypot)
+│   ├── Footer.tsx
+│   ├── ThemeProvider.tsx
 │   └── ui/
-│       ├── Button.tsx    # Boutons brutalist
-│       └── Card.tsx      # Cartes avec box-shadow
+│       ├── Button.tsx
+│       ├── Card.tsx
+│       ├── Modal.tsx          # Modale générique (utilisée par Projects.tsx)
+│       ├── LanguageSwitcher.tsx
+│       ├── ThemeSwitcher.tsx
+│       └── ParticlesBackground.tsx
 ├── hooks/
-│   └── useScrollAnimation.ts
-├── utils/
-│   └── constants.ts
-└── styles/
-    └── globals.css       # Styles brutalist custom
+│   ├── useScrollAnimation.ts
+│   └── useActiveSection.ts
+├── locales/
+│   ├── fr/translation.json    # Source de vérité du contenu texte (FR)
+│   └── en/translation.json    # Équivalent EN
+└── styles/globals.css
 ```
 
-## 🎯 FEATURES BRUTALIST
+Il n'y a pas de section Hero séparée : la section "À propos" fait office d'ouverture du site.
 
-### Custom Cursor
-- Cursor dot personnalisé (vert fluo)
-- Cursor square sur les liens et boutons
+## 🔒 Sécurité
 
-### Glitch Effects
-- Text glitch au hover sur le titre principal
-- Effets de décalage de couleur (cyan/green)
+- Content-Security-Policy et Referrer-Policy définies via balises `<meta>` dans `index.html`
+- Clé publique EmailJS restreinte par allowlist de domaine (prod uniquement)
+- Licence "tous droits réservés" (voir `LICENSE`)
+- Dependabot activé pour les alertes de dépendances npm
 
-### Box Shadows
-- Ombres plates et décalées (8px offset)
-- Animation au hover (12px offset + translate)
+## 📝 Licence
 
-### Textures
-- Background noise pattern
-- Grid background pattern (50px x 50px)
-
-### Transitions
-- Toutes en `linear` (pas d'easing)
-- Durée fixe de 0.15s
-- Changements brusques et intentionnels
-
-### Typography
-- Tout en UPPERCASE pour les headings
-- Espacement de lettres large (tracking-widest)
-- Poids bold pour emphase
-- Numérotation des sections (01, 02, 03, 04)
-
-## 🎨 PALETTE DE COULEURS
-
-```css
---brutal-black: #000000
---brutal-white: #FFFFFF
---brutal-accent: #00FF41 (Acid Green)
---brutal-accent2: #00FFFF (Neon Cyan - pour glitch)
---brutal-gray: #1A1A1A
---brutal-border: 4px
-```
-
-## ✨ SECTIONS
-
-1. **HERO** - Intro avec titre massif + corners accent
-2. **CV** - Timeline de formation + Skills avec barres de progression
-3. **PROJECTS** - Grille asymétrique de projets filtrables
-4. **CONTACT** - Formulaire brutal + liens sociaux
-5. **FOOTER** - ASCII art + informations
-
-## 📱 RESPONSIVE
-
-- Mobile-first approach
-- Breakpoints: sm, md, lg, xl
-- Menu burger pour mobile
-- Grilles adaptatives
-
-## 🔧 CUSTOMIZATION
-
-Pour modifier les couleurs ou le style, éditer:
-- `tailwind.config.js` - Config Tailwind
-- `src/styles/globals.css` - Styles brutalist custom
-
-## 📝 LICENSE
-
-© 2026 Aurélien Pacory - Tous droits réservés
-
----
-
-**[BUILT_WITH]** REACT + TAILWIND + TYPESCRIPT + BRUTALISM
+© 2026 Aurélien Pacory — Tous droits réservés. Voir [LICENSE](./LICENSE).
