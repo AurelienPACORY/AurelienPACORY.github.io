@@ -23,6 +23,7 @@ export const Footer = () => {
           className="text-muted-foreground"
         >
           <span>© {new Date().getFullYear()} - {t('footer.copyright_name')}</span>
+          <span className="block text-sm mt-1">{t('footer.rights_reserved')}</span>
         </motion.div>
 
         {/* Additional Link */}
